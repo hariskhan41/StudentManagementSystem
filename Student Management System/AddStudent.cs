@@ -80,7 +80,7 @@ namespace Student_Management_System
                     c2++;
                 }
             }
-            if (c1 != 1 && c2 != 1)
+            if (c1 != 1 || c2 != 1)
             {
                 return false;
             }
@@ -155,7 +155,7 @@ namespace Student_Management_System
                 }
                 if (input.Length == 11)
                 {
-                    for (int j = 0; i < 4; j++)
+                    for (int j = 0; j < 4; j++)
                     {
                         if (!char.IsDigit(arr1[j]))
                         {
@@ -181,7 +181,7 @@ namespace Student_Management_System
                 }
                 else
                 {
-                    for (int j = 0; i < 4; j++)
+                    for (int j = 0; j < 4; j++)
                     {
                         if (!char.IsDigit(arr1[j]))
                         {
@@ -220,46 +220,85 @@ namespace Student_Management_System
             {
                 errorStatus = "Invalid status";
             }
+            else if (input != "0" && input != "1")
+            {
+                errorStatus = "Invalid status";
+            }
             return errorStatus;
 
         }
 
-        public void addStudent()
+        public bool recordAlreadyExist()
+        {
+            string cmd = "SELECT * FROM Student WHERE RegistrationNumber='" + registrationNo + "'OR Email='" + email + "'";
+            SqlDataAdapter sqlDA = DatabaseConnection.getInstance().Query(cmd);
+            DataSet ds = new DataSet();
+            sqlDA.Fill(ds);
+            int i = ds.Tables[0].Rows.Count;
+            if (i > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public DataTable addStudent()
         {
             try
             {
-                /*if (isDigit(firstName) == false)
+
+                if (recordAlreadyExist())
                 {
-                    MessageBox.Show("Invalid First Name");
-                    return;
-                }
-                else if (isDigit(lastName) == false)
-                {
-                    MessageBox.Show("Invalid Last Name");
-                    return;
-                }
-                else if (isContact(contact) || contact.Length != 11)
-                {
-                    MessageBox.Show("Invalid Contact");
-                    return;
+                    MessageBox.Show("Registration No or email already exist");
                 }
                 else
                 {
                     string cmd = "INSERT INTO Student (FirstName, LastName, Contact, Email, RegistrationNumber, Status) VALUES ('" + firstName + "', '" + lastName + "', '" + contact + "', '" + email + "', '" + registrationNo + "', '" + status + "')";
                     DatabaseConnection.getInstance().exectuteQuery(cmd);
                     MessageBox.Show("Student Added Successfully");
-                    return;
-                }*/
-                string cmd = "INSERT INTO Student (FirstName, LastName, Contact, Email, RegistrationNumber, Status) VALUES ('" + firstName + "', '" + lastName + "', '" + contact + "', '" + email + "', '" + registrationNo + "', '" + status + "')";
-                DatabaseConnection.getInstance().exectuteQuery(cmd);
-                MessageBox.Show("Student Added Successfully");
-                return;
+                }
+                string cmd2 = "SELECT * FROM Student";
+                SqlDataAdapter sqlDA = DatabaseConnection.getInstance().Query(cmd2);
+                DataTable dt = new DataTable();
+                sqlDA.Fill(dt);
+
+
+                return dt;
 
             }
             catch (Exception ex)
             {
                 throw (ex);
             }
+        }
+
+
+        public DataTable Edit(int id)
+        {
+            string cmd = "UPDATE Student SET FirstName = '" + firstName + "', LastName = '" + lastName + "', Contact = '" + contact + "', Email = '" + email + "', RegistrationNumber = '" + registrationNo + "', Status = '" + status + "' WHERE Id = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd);
+            MessageBox.Show("Data Updated!");
+            string cmd2 = "SELECT * FROM Student";
+            SqlDataAdapter sqlDA = DatabaseConnection.getInstance().Query(cmd2);
+            DataTable dt = new DataTable();
+            sqlDA.Fill(dt);
+            return dt;
+        }
+
+        public DataTable Delete(int id)
+        {
+            string cmd = "DELETE FROM Student WHERE Id = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd);
+            MessageBox.Show("Data Deleted!");
+            string cmd2 = "SELECT * FROM Student";
+            SqlDataAdapter sqlDA = DatabaseConnection.getInstance().Query(cmd2);
+            DataTable dt = new DataTable();
+            sqlDA.Fill(dt);
+            return dt;
+
         }
 
 

@@ -41,6 +41,8 @@ namespace Student_Management_System
             return connection;
         }
 
+
+
         /// <summary>
         /// Reads the data from SQL database.
         /// </summary>
@@ -65,6 +67,15 @@ namespace Student_Management_System
             SqlCommand cmd = new SqlCommand(commnadText, connection);
             int rows = cmd.ExecuteNonQuery();
             return rows;
+        }
+
+
+        public SqlDataAdapter Query(String commandText)
+        {
+            connection = getConnection();
+            //SqlCommand cmd = new SqlCommand(commandText, connection);
+            SqlDataAdapter sqlDA = new SqlDataAdapter(commandText, connection);
+            return sqlDA;
         }
 
         /// <summary>
