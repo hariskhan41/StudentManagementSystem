@@ -36,10 +36,55 @@ namespace Student_Management_System
         public int getId()
         {
             int i;
-            string cmd = "SELECT MAX(Id) FROM Rubric";
-            i = DatabaseConnection.getInstance().getScalarData(cmd);
-            return i;
+            int count;
+            string cmd1 = "SELECT COUNT(*) FROM Rubric";
+            count = DatabaseConnection.getInstance().getScalarData(cmd1);
+            if (count != 0)
+            {
+                string cmd = "SELECT MAX(Id) FROM Rubric";
+                i = DatabaseConnection.getInstance().getScalarData(cmd);
+                return i;
+            }
+            else
+            {
+                return -1;
+            }
         }
+
+        public void Edit(int id)
+        {
+            string cmd = "UPDATE Rubric SET Details = '" + Details + "', CloId = '" + CloId + "' WHERE Id = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd);
+            MessageBox.Show("Data Updated!");
+            //string cmd2 = "SELECT * FROM Clo";
+            //SqlDataAdapter sqlDA = DatabaseConnection.getInstance().Query(cmd2);
+            //DataTable dt = new DataTable();
+            //sqlDA.Fill(dt);
+            //return dt;
+        }
+
+
+        public int getCloId(string cloName)
+        {
+            string cmd = "SELECT Id FROM Clo WHERE Name = '" + cloName + "'";
+            int id = DatabaseConnection.getInstance().getScalarData(cmd);
+            return id;
+        }
+
+
+        public string getCloNameById(int id)
+        {
+            string name = "";
+            string cmd = "SELECT * FROM Clo WHERE Id = '" + id + "'";
+            SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            while (d.Read())
+            {
+                name = d.GetString(1);
+                break;
+            }
+            return name;
+        }
+
 
         public void AddRubric()
         {
@@ -47,6 +92,13 @@ namespace Student_Management_System
             DatabaseConnection.getInstance().exectuteQuery(cmd);
             MessageBox.Show("CLO Is Added Successfully");
             DatabaseConnection.getInstance().closeConnection();
+        }
+
+        public void Delete(int id)
+        {
+            string cmd = "DELETE FROM Rubric WHERE Id = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd);
+            MessageBox.Show("Data Deleted!");
         }
 
         public DataTable ShowInGrid()

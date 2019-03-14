@@ -19,6 +19,21 @@ namespace Student_Management_System
 
         public DateTime dateUpdated { get; set; }
 
+        public string errorName { get; set; }
+
+        public string ErrorName(string name)
+        {
+            errorName = "";
+            foreach (char c in name)
+            {
+                if (!char.IsLetter(c) && !char.IsDigit(c) && c != ' ')
+                {
+                    errorName = "Invalid Name";
+                }
+            }
+            return errorName;
+        }
+
 
         public void add()
         {
@@ -47,6 +62,15 @@ namespace Student_Management_System
             DataTable dt = new DataTable();
             sqlDA.Fill(dt);
             return dt;
+        }
+
+        public void Delete(int id)
+        {
+            string cmd = "DELETE FROM Rubric WHERE CloId = '" + id + "'";
+            string cmd2 = "DELETE FROM Clo WHERE Id = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd);
+            DatabaseConnection.getInstance().exectuteQuery(cmd2);
+            MessageBox.Show("CLO is deleted along with all of rubrics against this CLO");
         }
     }
 }

@@ -43,6 +43,7 @@
             this.projectBDataSet1 = new Student_Management_System.ProjectBDataSet1();
             this.btn_Update = new System.Windows.Forms.Button();
             this.cloTableAdapter = new Student_Management_System.ProjectBDataSet1TableAdapters.CloTableAdapter();
+            this.lbl_ErrorName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet1)).BeginInit();
@@ -51,7 +52,7 @@
             // lbl_CloName
             // 
             this.lbl_CloName.AutoSize = true;
-            this.lbl_CloName.Location = new System.Drawing.Point(185, 64);
+            this.lbl_CloName.Location = new System.Drawing.Point(176, 46);
             this.lbl_CloName.Name = "lbl_CloName";
             this.lbl_CloName.Size = new System.Drawing.Size(35, 13);
             this.lbl_CloName.TabIndex = 0;
@@ -59,7 +60,7 @@
             // 
             // txt_CloName
             // 
-            this.txt_CloName.Location = new System.Drawing.Point(359, 60);
+            this.txt_CloName.Location = new System.Drawing.Point(350, 42);
             this.txt_CloName.Name = "txt_CloName";
             this.txt_CloName.Size = new System.Drawing.Size(166, 20);
             this.txt_CloName.TabIndex = 1;
@@ -159,11 +160,21 @@
             // 
             this.cloTableAdapter.ClearBeforeFill = true;
             // 
+            // lbl_ErrorName
+            // 
+            this.lbl_ErrorName.AutoSize = true;
+            this.lbl_ErrorName.Location = new System.Drawing.Point(347, 75);
+            this.lbl_ErrorName.Name = "lbl_ErrorName";
+            this.lbl_ErrorName.Size = new System.Drawing.Size(35, 13);
+            this.lbl_ErrorName.TabIndex = 5;
+            this.lbl_ErrorName.Text = "label1";
+            // 
             // Clo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 321);
+            this.Controls.Add(this.lbl_ErrorName);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_Add);
@@ -196,5 +207,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateUpdatedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.Label lbl_ErrorName;
     }
 }

@@ -30,9 +30,16 @@ namespace Student_Management_System
             c.name = txt_CloName.Text;
             c.dateCreated = DateTime.Now;
             c.dateUpdated = DateTime.Now;
-            c.add();
-            DataTable dt = c.ShowInGrid();
-            dataGridView1.DataSource = dt;
+
+            lbl_ErrorName.Text = c.ErrorName(c.name);
+            lbl_ErrorName.ForeColor = System.Drawing.Color.Red;
+            lbl_ErrorName.Refresh();
+            if (lbl_ErrorName.Text == "")
+            {
+                c.add();
+                DataTable dt = c.ShowInGrid();
+                dataGridView1.DataSource = dt;
+            }
         }
 
         private void Clo_Load(object sender, EventArgs e)
@@ -62,18 +69,16 @@ namespace Student_Management_System
                 string id1 = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
                 id = Convert.ToInt32(id1);
                 txt_CloName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
-                dateCreated = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                dateCreated = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
             }
             else if (value == "Delete")
             {
                 string id1 = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
                 id = Convert.ToInt32(id1);
 
-                AddStudent s = new AddStudent();
-                DataTable dt = new DataTable();
-                dt = s.Delete(id);
-                dataGridView1.DataSource = dt;
-
+                AddClo c = new AddClo();
+                c.Delete(id);
+                c.ShowInGrid();
             }
         }
     }
