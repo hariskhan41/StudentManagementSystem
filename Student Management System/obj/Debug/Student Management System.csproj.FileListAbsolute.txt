@@ -1,9 +1,11 @@
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\bin\Debug\Student Management System.exe.config
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\bin\Debug\Student Management System.exe
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\bin\Debug\Student Management System.pdb
-F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student Management System.csprojResolveAssemblyReference.cache
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.AddStudents.resources
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Properties.Resources.resources
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student Management System.csproj.GenerateResource.Cache
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student Management System.exe
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student Management System.pdb
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.CLO.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student Management System.csprojResolveAssemblyReference.cache
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Rubric.resources

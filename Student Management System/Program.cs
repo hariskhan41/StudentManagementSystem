@@ -16,7 +16,7 @@ namespace Student_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddStudents());
+            Application.Run(new Rubric());
         }
     }
 }

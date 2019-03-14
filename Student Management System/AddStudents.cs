@@ -26,7 +26,9 @@ namespace Student_Management_System
 
         private void AddStudents_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'projectBDataSet.Student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.projectBDataSet.Student);
+
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -140,21 +142,21 @@ namespace Student_Management_System
 
             if (value == "Edit")
             {
-                string id1 = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                string id1 = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
                 id = Convert.ToInt32(id1);
-                txt_FirstName.Text = dataGridView1.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
-                txt_LastName.Text = dataGridView1.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
-                txt_Contact.Text = dataGridView1.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
-                txt_Email.Text = dataGridView1.Rows[e.RowIndex].Cells[6].FormattedValue.ToString();
-                txt_RegistrationNo.Text = dataGridView1.Rows[e.RowIndex].Cells[7].FormattedValue.ToString();
-                txt_Status.Text = dataGridView1.Rows[e.RowIndex].Cells[8].FormattedValue.ToString();
+                txt_FirstName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                txt_LastName.Text = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                txt_Contact.Text = dataGridView1.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
+                txt_Email.Text = dataGridView1.Rows[e.RowIndex].Cells[4].FormattedValue.ToString();
+                txt_RegistrationNo.Text = dataGridView1.Rows[e.RowIndex].Cells[5].FormattedValue.ToString();
+                txt_Status.Text = dataGridView1.Rows[e.RowIndex].Cells[6].FormattedValue.ToString();
 
                 
 
             }
             else if (value == "Delete")
             {
-                string id1 = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                string id1 = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
                 id = Convert.ToInt32(id1);
 
                 AddStudent s = new AddStudent();

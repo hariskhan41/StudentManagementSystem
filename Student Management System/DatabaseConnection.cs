@@ -56,6 +56,14 @@ namespace Student_Management_System
             return reader;
         }
 
+        public int getScalarData(String commandText)
+        {
+            connection = getConnection();
+            SqlCommand cmd = new SqlCommand(commandText, connection);
+            int reader = (int)cmd.ExecuteScalar();
+            return reader;
+        }
+
         /// <summary>
         /// Executes the commands in query and calculates number of rows effected.
         /// </summary>
