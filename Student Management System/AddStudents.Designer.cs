@@ -69,138 +69,154 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.cmb_Status = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_FirstName
             // 
-            this.txt_FirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_FirstName.Location = new System.Drawing.Point(351, 91);
+            this.txt_FirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_FirstName.Location = new System.Drawing.Point(93, 3);
             this.txt_FirstName.Name = "txt_FirstName";
-            this.txt_FirstName.Size = new System.Drawing.Size(847, 20);
+            this.txt_FirstName.Size = new System.Drawing.Size(873, 20);
             this.txt_FirstName.TabIndex = 0;
             // 
             // txt_LastName
             // 
-            this.txt_LastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_LastName.Location = new System.Drawing.Point(351, 131);
+            this.txt_LastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_LastName.Location = new System.Drawing.Point(93, 45);
             this.txt_LastName.Name = "txt_LastName";
-            this.txt_LastName.Size = new System.Drawing.Size(847, 20);
+            this.txt_LastName.Size = new System.Drawing.Size(873, 20);
             this.txt_LastName.TabIndex = 1;
             // 
             // txt_Contact
             // 
-            this.txt_Contact.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Contact.Location = new System.Drawing.Point(351, 175);
+            this.txt_Contact.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Contact.Location = new System.Drawing.Point(93, 92);
             this.txt_Contact.Name = "txt_Contact";
-            this.txt_Contact.Size = new System.Drawing.Size(847, 20);
+            this.txt_Contact.Size = new System.Drawing.Size(873, 20);
             this.txt_Contact.TabIndex = 2;
             // 
             // txt_Email
             // 
-            this.txt_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Email.Location = new System.Drawing.Point(351, 263);
+            this.txt_Email.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Email.Location = new System.Drawing.Point(93, 186);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(847, 20);
+            this.txt_Email.Size = new System.Drawing.Size(873, 20);
             this.txt_Email.TabIndex = 3;
             // 
             // lbl_FirstName
             // 
-            this.lbl_FirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_FirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_FirstName.AutoSize = true;
-            this.lbl_FirstName.Location = new System.Drawing.Point(271, 95);
+            this.lbl_FirstName.Location = new System.Drawing.Point(3, 7);
             this.lbl_FirstName.Name = "lbl_FirstName";
-            this.lbl_FirstName.Size = new System.Drawing.Size(57, 13);
+            this.lbl_FirstName.Size = new System.Drawing.Size(84, 13);
             this.lbl_FirstName.TabIndex = 7;
             this.lbl_FirstName.Text = "First Name";
             // 
             // lbl_LastName
             // 
-            this.lbl_LastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_LastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_LastName.AutoSize = true;
-            this.lbl_LastName.Location = new System.Drawing.Point(271, 135);
+            this.lbl_LastName.Location = new System.Drawing.Point(3, 50);
             this.lbl_LastName.Name = "lbl_LastName";
-            this.lbl_LastName.Size = new System.Drawing.Size(58, 13);
+            this.lbl_LastName.Size = new System.Drawing.Size(84, 13);
             this.lbl_LastName.TabIndex = 8;
             this.lbl_LastName.Text = "Last Name";
             // 
             // lbl_Contact
             // 
-            this.lbl_Contact.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Contact.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Contact.AutoSize = true;
-            this.lbl_Contact.Location = new System.Drawing.Point(271, 179);
+            this.lbl_Contact.Location = new System.Drawing.Point(3, 98);
             this.lbl_Contact.Name = "lbl_Contact";
-            this.lbl_Contact.Size = new System.Drawing.Size(44, 13);
+            this.lbl_Contact.Size = new System.Drawing.Size(84, 13);
             this.lbl_Contact.TabIndex = 9;
             this.lbl_Contact.Text = "Contact";
             // 
             // lbl_Email
             // 
-            this.lbl_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Email.AutoSize = true;
-            this.lbl_Email.Location = new System.Drawing.Point(271, 267);
+            this.lbl_Email.Location = new System.Drawing.Point(3, 189);
             this.lbl_Email.Name = "lbl_Email";
-            this.lbl_Email.Size = new System.Drawing.Size(32, 13);
+            this.lbl_Email.Size = new System.Drawing.Size(84, 13);
             this.lbl_Email.TabIndex = 10;
             this.lbl_Email.Text = "Email";
             // 
             // lbl_ErrorFirstName
             // 
-            this.lbl_ErrorFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_ErrorFirstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorFirstName.AutoSize = true;
-            this.lbl_ErrorFirstName.Location = new System.Drawing.Point(351, 111);
+            this.lbl_ErrorFirstName.Location = new System.Drawing.Point(93, 27);
             this.lbl_ErrorFirstName.Name = "lbl_ErrorFirstName";
-            this.lbl_ErrorFirstName.Size = new System.Drawing.Size(23, 13);
+            this.lbl_ErrorFirstName.Size = new System.Drawing.Size(873, 13);
             this.lbl_ErrorFirstName.TabIndex = 14;
             this.lbl_ErrorFirstName.Text = "zxc";
             // 
             // lbl_ErrorContact
             // 
-            this.lbl_ErrorContact.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_ErrorContact.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorContact.AutoSize = true;
-            this.lbl_ErrorContact.Location = new System.Drawing.Point(351, 198);
+            this.lbl_ErrorContact.Location = new System.Drawing.Point(93, 120);
             this.lbl_ErrorContact.Name = "lbl_ErrorContact";
-            this.lbl_ErrorContact.Size = new System.Drawing.Size(23, 13);
+            this.lbl_ErrorContact.Size = new System.Drawing.Size(873, 13);
             this.lbl_ErrorContact.TabIndex = 15;
             this.lbl_ErrorContact.Text = "zxc";
             // 
             // lbl_ErrorRegistrationNo
             // 
-            this.lbl_ErrorRegistrationNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_ErrorRegistrationNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorRegistrationNo.AutoSize = true;
-            this.lbl_ErrorRegistrationNo.Location = new System.Drawing.Point(351, 240);
+            this.lbl_ErrorRegistrationNo.Location = new System.Drawing.Point(93, 164);
             this.lbl_ErrorRegistrationNo.Name = "lbl_ErrorRegistrationNo";
-            this.lbl_ErrorRegistrationNo.Size = new System.Drawing.Size(23, 13);
+            this.lbl_ErrorRegistrationNo.Size = new System.Drawing.Size(873, 13);
             this.lbl_ErrorRegistrationNo.TabIndex = 16;
             this.lbl_ErrorRegistrationNo.Text = "zxc";
             // 
             // lbl_ErrorLastName
             // 
-            this.lbl_ErrorLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_ErrorLastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorLastName.AutoSize = true;
-            this.lbl_ErrorLastName.Location = new System.Drawing.Point(351, 154);
+            this.lbl_ErrorLastName.Location = new System.Drawing.Point(93, 71);
             this.lbl_ErrorLastName.Name = "lbl_ErrorLastName";
-            this.lbl_ErrorLastName.Size = new System.Drawing.Size(24, 13);
+            this.lbl_ErrorLastName.Size = new System.Drawing.Size(873, 13);
             this.lbl_ErrorLastName.TabIndex = 17;
             this.lbl_ErrorLastName.Text = "asd";
             // 
             // lbl_ErrorEmail
             // 
-            this.lbl_ErrorEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_ErrorEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorEmail.AutoSize = true;
-            this.lbl_ErrorEmail.Location = new System.Drawing.Point(351, 284);
+            this.lbl_ErrorEmail.Location = new System.Drawing.Point(93, 209);
             this.lbl_ErrorEmail.Name = "lbl_ErrorEmail";
-            this.lbl_ErrorEmail.Size = new System.Drawing.Size(24, 13);
+            this.lbl_ErrorEmail.Size = new System.Drawing.Size(873, 13);
             this.lbl_ErrorEmail.TabIndex = 18;
             this.lbl_ErrorEmail.Text = "asd";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -218,7 +234,7 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlText;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(975, 228);
+            this.dataGridView1.Size = new System.Drawing.Size(975, 198);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -291,9 +307,10 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(321, 354);
+            this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Add.Location = new System.Drawing.Point(3, 9);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(255, 25);
+            this.btn_Add.Size = new System.Drawing.Size(307, 25);
             this.btn_Add.TabIndex = 13;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -301,38 +318,40 @@
             // 
             // txt_RegistrationNo
             // 
-            this.txt_RegistrationNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_RegistrationNo.Location = new System.Drawing.Point(351, 219);
+            this.txt_RegistrationNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_RegistrationNo.Location = new System.Drawing.Point(93, 139);
             this.txt_RegistrationNo.Name = "txt_RegistrationNo";
-            this.txt_RegistrationNo.Size = new System.Drawing.Size(847, 20);
+            this.txt_RegistrationNo.Size = new System.Drawing.Size(873, 20);
             this.txt_RegistrationNo.TabIndex = 4;
             // 
             // lbl_Status
             // 
-            this.lbl_Status.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Status.AutoSize = true;
-            this.lbl_Status.Location = new System.Drawing.Point(271, 312);
+            this.lbl_Status.Location = new System.Drawing.Point(3, 237);
             this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(37, 13);
+            this.lbl_Status.Size = new System.Drawing.Size(84, 13);
             this.lbl_Status.TabIndex = 12;
             this.lbl_Status.Text = "Status";
             this.lbl_Status.Click += new System.EventHandler(this.lbl_Status_Click);
             // 
             // lbl_RegistrationNo
             // 
-            this.lbl_RegistrationNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_RegistrationNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_RegistrationNo.AutoSize = true;
-            this.lbl_RegistrationNo.Location = new System.Drawing.Point(271, 223);
+            this.lbl_RegistrationNo.Location = new System.Drawing.Point(3, 143);
             this.lbl_RegistrationNo.Name = "lbl_RegistrationNo";
-            this.lbl_RegistrationNo.Size = new System.Drawing.Size(73, 13);
+            this.lbl_RegistrationNo.Size = new System.Drawing.Size(84, 13);
             this.lbl_RegistrationNo.TabIndex = 11;
             this.lbl_RegistrationNo.Text = "Registration #";
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(611, 355);
+            this.btn_Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Update.Location = new System.Drawing.Point(316, 10);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(255, 23);
+            this.btn_Update.Size = new System.Drawing.Size(329, 23);
             this.btn_Update.TabIndex = 25;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
@@ -344,6 +363,8 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
@@ -431,9 +452,10 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(899, 355);
+            this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cancel.Location = new System.Drawing.Point(651, 10);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(254, 23);
+            this.btn_Cancel.Size = new System.Drawing.Size(315, 23);
             this.btn_Cancel.TabIndex = 29;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
@@ -441,54 +463,98 @@
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(243, 396);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(243, 426);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(981, 234);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(981, 204);
             this.tableLayoutPanel3.TabIndex = 30;
             this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // cmb_Status
             // 
+            this.cmb_Status.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Status.FormattingEnabled = true;
-            this.cmb_Status.Location = new System.Drawing.Point(351, 312);
+            this.cmb_Status.Location = new System.Drawing.Point(93, 231);
             this.cmb_Status.Name = "cmb_Status";
-            this.cmb_Status.Size = new System.Drawing.Size(847, 21);
+            this.cmb_Status.Size = new System.Drawing.Size(873, 21);
             this.cmb_Status.TabIndex = 31;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 879F));
+            this.tableLayoutPanel4.Controls.Add(this.lbl_FirstName, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.cmb_Status, 1, 10);
+            this.tableLayoutPanel4.Controls.Add(this.txt_FirstName, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_ErrorFirstName, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_LastName, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.txt_LastName, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_ErrorLastName, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Contact, 0, 4);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Status, 0, 10);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_Email, 0, 8);
+            this.tableLayoutPanel4.Controls.Add(this.txt_Email, 1, 8);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_ErrorEmail, 1, 9);
+            this.tableLayoutPanel4.Controls.Add(this.txt_Contact, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_ErrorContact, 1, 5);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_RegistrationNo, 0, 6);
+            this.tableLayoutPanel4.Controls.Add(this.txt_RegistrationNo, 1, 6);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_ErrorRegistrationNo, 1, 7);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(243, 80);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 11;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(969, 258);
+            this.tableLayoutPanel4.TabIndex = 32;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 313F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 335F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel5.Controls.Add(this.btn_Add, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_Update, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_Cancel, 2, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(243, 363);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(969, 43);
+            this.tableLayoutPanel5.TabIndex = 33;
             // 
             // AddStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1224, 628);
-            this.Controls.Add(this.cmb_Status);
-            this.Controls.Add(this.btn_Cancel);
+            this.Controls.Add(this.tableLayoutPanel5);
+            this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.lbl_LastName);
-            this.Controls.Add(this.lbl_FirstName);
-            this.Controls.Add(this.txt_LastName);
-            this.Controls.Add(this.btn_Update);
-            this.Controls.Add(this.lbl_Email);
-            this.Controls.Add(this.txt_FirstName);
-            this.Controls.Add(this.lbl_Status);
-            this.Controls.Add(this.txt_Contact);
-            this.Controls.Add(this.txt_Email);
-            this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.lbl_ErrorLastName);
-            this.Controls.Add(this.lbl_Contact);
-            this.Controls.Add(this.lbl_ErrorEmail);
-            this.Controls.Add(this.lbl_RegistrationNo);
-            this.Controls.Add(this.lbl_ErrorFirstName);
-            this.Controls.Add(this.lbl_ErrorRegistrationNo);
-            this.Controls.Add(this.lbl_ErrorContact);
-            this.Controls.Add(this.txt_RegistrationNo);
             this.Name = "AddStudents";
             this.Text = "AddStudents";
             this.Load += new System.EventHandler(this.AddStudents_Load);
@@ -499,8 +565,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -546,5 +614,7 @@
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.ComboBox cmb_Status;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
     }
 }

@@ -114,6 +114,7 @@ namespace Student_Management_System
         private void btn_AddStudents_Click(object sender, EventArgs e)
         {
             AddStudents.getInstance().Show();
+            AddStudents.getInstance().Refresh();
             AddStudents.getInstance().Location = this.Location;
             this.Hide();
         }
@@ -121,6 +122,7 @@ namespace Student_Management_System
         private void btn_AddClo_Click(object sender, EventArgs e)
         {
             Clo.getInstance().Show();
+            Clo.getInstance().Refresh();
             Clo.getInstance().Location = this.Location;
             this.Hide();
         }

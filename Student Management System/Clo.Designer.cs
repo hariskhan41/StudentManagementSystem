@@ -52,35 +52,43 @@
             this.btn_AddRubrics = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Cancel = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_CloName
             // 
+            this.lbl_CloName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CloName.AutoSize = true;
-            this.lbl_CloName.Location = new System.Drawing.Point(264, 108);
+            this.lbl_CloName.Location = new System.Drawing.Point(3, 8);
             this.lbl_CloName.Name = "lbl_CloName";
-            this.lbl_CloName.Size = new System.Drawing.Size(35, 13);
+            this.lbl_CloName.Size = new System.Drawing.Size(50, 13);
             this.lbl_CloName.TabIndex = 0;
             this.lbl_CloName.Text = "Name";
             // 
             // txt_CloName
             // 
-            this.txt_CloName.Location = new System.Drawing.Point(335, 105);
+            this.txt_CloName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_CloName.Location = new System.Drawing.Point(59, 3);
             this.txt_CloName.Name = "txt_CloName";
-            this.txt_CloName.Size = new System.Drawing.Size(837, 20);
+            this.txt_CloName.Size = new System.Drawing.Size(876, 20);
             this.txt_CloName.TabIndex = 1;
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(281, 207);
+            this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Add.Location = new System.Drawing.Point(3, 16);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(291, 23);
+            this.btn_Add.Size = new System.Drawing.Size(299, 23);
             this.btn_Add.TabIndex = 2;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -88,6 +96,9 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -161,9 +172,10 @@
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(578, 207);
+            this.btn_Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Update.Location = new System.Drawing.Point(308, 16);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(291, 23);
+            this.btn_Update.Size = new System.Drawing.Size(299, 23);
             this.btn_Update.TabIndex = 4;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
@@ -175,10 +187,12 @@
             // 
             // lbl_ErrorName
             // 
+            this.lbl_ErrorName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorName.AutoSize = true;
-            this.lbl_ErrorName.Location = new System.Drawing.Point(332, 136);
+            this.lbl_ErrorName.Location = new System.Drawing.Point(59, 30);
             this.lbl_ErrorName.Name = "lbl_ErrorName";
-            this.lbl_ErrorName.Size = new System.Drawing.Size(35, 13);
+            this.lbl_ErrorName.Size = new System.Drawing.Size(876, 13);
             this.lbl_ErrorName.TabIndex = 5;
             this.lbl_ErrorName.Text = "label1";
             // 
@@ -209,13 +223,14 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
             this.tableLayoutPanel1.Controls.Add(this.btn_AddStudents, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_AddClo, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btn_AddRubrics, 0, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -272,6 +287,8 @@
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
@@ -284,28 +301,60 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(875, 207);
+            this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cancel.Location = new System.Drawing.Point(613, 16);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(291, 23);
+            this.btn_Cancel.Size = new System.Drawing.Size(321, 23);
             this.btn_Cancel.TabIndex = 31;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel4.Controls.Add(this.txt_CloName, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_ErrorName, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lbl_CloName, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(242, 92);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.88235F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.11765F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(938, 55);
+            this.tableLayoutPanel4.TabIndex = 32;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 305F));
+            this.tableLayoutPanel5.Controls.Add(this.btn_Add, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_Update, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btn_Cancel, 2, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(243, 175);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(937, 55);
+            this.tableLayoutPanel5.TabIndex = 33;
             // 
             // Clo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 628);
-            this.Controls.Add(this.btn_Cancel);
+            this.Controls.Add(this.tableLayoutPanel5);
+            this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.lbl_ErrorName);
-            this.Controls.Add(this.btn_Update);
-            this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.txt_CloName);
-            this.Controls.Add(this.lbl_CloName);
             this.Name = "Clo";
             this.Text = "Clo";
             this.Load += new System.EventHandler(this.Clo_Load);
@@ -316,8 +365,10 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -346,5 +397,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
     }
 }

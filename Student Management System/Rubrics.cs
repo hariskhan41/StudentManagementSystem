@@ -22,10 +22,15 @@ namespace Student_Management_System
         public int CloId { get; set; }
 
 
+        /// <summary>
+        /// Add items to combobox from sql table.
+        /// </summary>
+        /// <param name="cmb">ComboBox object in which item list is to be stored</param>
         public void AddToComboBox(ComboBox cmb)
         {
             string cmd = "SELECT * FROM CLO";
             SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            cmb.Items.Clear();
             while (d.Read())
             {
                 string n = d.GetString(1);
@@ -33,6 +38,10 @@ namespace Student_Management_System
             }
         }
 
+        /// <summary>
+        /// Get highest id from Rubric table if any
+        /// </summary>
+        /// <returns>Returns highest id if any otherwise returns -1</returns>
         public int getId()
         {
             int i;
@@ -51,6 +60,11 @@ namespace Student_Management_System
             }
         }
 
+
+        /// <summary>
+        /// Update data of particular record
+        /// </summary>
+        /// <param name="id">Id of particular row clicked by user whose data is to be edited</param>
         public void Edit(int id)
         {
             string cmd = "UPDATE Rubric SET Details = '" + Details + "', CloId = '" + CloId + "' WHERE Id = '" + id + "'";
@@ -64,6 +78,11 @@ namespace Student_Management_System
         }
 
 
+        /// <summary>
+        /// Gets clo id Corresponding to particular name from Clo table to be stored in combobox
+        /// </summary>
+        /// <param name="cloName">Name string against which id is to be get</param>
+        /// <returns>returns id against entered name</returns>
         public int getCloId(string cloName)
         {
             string cmd = "SELECT Id FROM Clo WHERE Name = '" + cloName + "'";
@@ -71,7 +90,11 @@ namespace Student_Management_System
             return id;
         }
 
-
+        /// <summary>
+        /// Gets clo name Corresponding to particular id from Clo table to be stored in combobox
+        /// </summary>
+        /// <param name="cloName">id against which clo name is to be get</param>
+        /// <returns>returns clo name against entered id</returns>
         public string getCloNameById(int id)
         {
             string name = "";
@@ -85,7 +108,9 @@ namespace Student_Management_System
             return name;
         }
 
-
+        /// <summary>
+        /// Add Rubrics' data tu Rubric table.
+        /// </summary>
         public void AddRubric()
         {
             string cmd = "INSERT INTO Rubric (Id, Details, CloId) VALUES ('" + Id + "','" + Details + "','" + CloId + "')";
@@ -94,6 +119,10 @@ namespace Student_Management_System
             DatabaseConnection.getInstance().closeConnection();
         }
 
+        /// <summary>
+        /// Delete particular row record from table.
+        /// </summary>
+        /// <param name="id">Id agains which record is to be deleted</param>
         public void Delete(int id)
         {
             string cmd = "DELETE FROM Rubric WHERE Id = '" + id + "'";
@@ -101,6 +130,10 @@ namespace Student_Management_System
             MessageBox.Show("Data Deleted!");
         }
 
+        /// <summary>
+        /// Fetch data from table
+        /// </summary>
+        /// <returns>Return datatable containing data that is fetched.</returns>
         public DataTable ShowInGrid()
         {
             string cmd2 = "SELECT * FROM Rubric";

@@ -127,6 +127,7 @@ namespace Student_Management_System
         private void btn_AddStudents_Click(object sender, EventArgs e)
         {
             AddStudents.getInstance().Show();
+            AddStudents.getInstance().Refresh();
             AddStudents.getInstance().Location = this.Location;
             this.Hide();
         }
@@ -134,6 +135,12 @@ namespace Student_Management_System
         private void btn_AddRubrics_Click(object sender, EventArgs e)
         {
             Rubric.getInstance().Show();
+
+            Rubrics r = new Rubrics();
+            Rubric.getInstance().cmb_CLO.Items.Clear();
+            r.AddToComboBox(Rubric.getInstance().cmb_CLO);
+
+            Rubric.getInstance().Refresh();
             Rubric.getInstance().Location = this.Location;
             this.Hide();
         }

@@ -38,6 +38,10 @@ namespace Student_Management_System
         public string errorStatus { get; set; }
 
 
+        /// <summary>
+        /// Add items to combobox from sql table.
+        /// </summary>
+        /// <param name="cmb">ComboBox object in which item list is to be stored</param>
         public void AddToComboBox(ComboBox cmb)
         {
             string cmd = "SELECT * FROM Lookup";
@@ -49,6 +53,11 @@ namespace Student_Management_System
             }
         }
 
+        /// <summary>
+        /// Get Lookup Id from Lookup Table using status
+        /// </summary>
+        /// <param name="input">Status as input. Status has value: Active, Inavtive, Present, Absent etc.</param>
+        /// <returns></returns>
         public int getLookupIdByStatus(string input)
         {
             int Lid = 0;
@@ -62,6 +71,12 @@ namespace Student_Management_System
             return Lid;
         }
 
+
+        /// <summary>
+        /// Finds Name of status i.e Active, Inactive, Present, Absent etc from Lookup table using Lookup Id.
+        /// </summary>
+        /// <param name="id">Lookup Id coming from Students' table, status</param>
+        /// <returns>Return Name coressponding to lookup Id</returns>
         public string getCategoryNameById(int id)
         {
             string CategoryName = "";
@@ -69,14 +84,18 @@ namespace Student_Management_System
             SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
             while (d.Read())
             {
-                CategoryName = d.GetString(2);
+                CategoryName = d.GetString(1);
                 break;
             }
             return CategoryName;
         }
 
 
-
+        /// <summary>
+        /// Checks if Entered string contains digit or not
+        /// </summary>
+        /// <param name="input">Input string by user to be checked</param>
+        /// <returns>Returns false if string has digit</returns>
         public bool isDigit(string input)
         {
             foreach (char c in input)
@@ -89,6 +108,11 @@ namespace Student_Management_System
             return true;
         }
 
+        /// <summary>
+        /// Checks if contact number is valid i.e it only have digits.
+        /// </summary>
+        /// <param name="input">Contact number string entered by user</param>
+        /// <returns>Returns true if string has anything other than digits</returns>
         public bool isContact(string input)
         {
             foreach (char c in input)
@@ -101,6 +125,11 @@ namespace Student_Management_System
             return false;
         }
 
+        /// <summary>
+        /// Checks if email is in correct format.
+        /// </summary>
+        /// <param name="input">Input email string by user.</param>
+        /// <returns>Returns treu if email is in correct format.</returns>
         public bool isEmail(string input)
         {
             int c1 = 0;
@@ -129,7 +158,11 @@ namespace Student_Management_System
 
 
 
-
+        /// <summary>
+        /// Checks if first Name is in correct format i.e it only have ketters
+        /// </summary>
+        /// <param name="input">input first name string entered by user</param>
+        /// <returns>Return Invalid first name if name has anything other than letters</returns>
         public string ErrorFirstName(string input)
         {
             errorFirstName = "";
@@ -141,6 +174,11 @@ namespace Student_Management_System
         }
 
 
+        /// <summary>
+        /// Checks if Last Name is in correct format i.e it only have ketters
+        /// </summary>
+        /// <param name="input">input Last name string entered by user</param>
+        /// <returns>Return Invalid Last name if name has anything other than letters</returns>
         public string ErrorLastName(string input)
         {
             errorLastName = "";
@@ -151,6 +189,11 @@ namespace Student_Management_System
             return errorLastName;
         }
 
+        /// <summary>
+        /// Checks if contact number is correct.
+        /// </summary>
+        /// <param name="input">input contact number string by user.</param>
+        /// <returns>Returns Invalid contact string if contact is not correct</returns>
         public string ErrorContact(string input)
         {
             errorContact = "";
@@ -161,6 +204,11 @@ namespace Student_Management_System
             return errorContact;
         }
 
+        /// <summary>
+        /// Checks if Email is in correct format
+        /// </summary>
+        /// <param name="input">input Email string entered by user</param>
+        /// <returns>Return Invalid Email if email has anything other than letters</returns>
         public string ErrorEmail(string input)
         {
             errorEmail = "";
@@ -171,6 +219,11 @@ namespace Student_Management_System
             return errorEmail;
         }
 
+        /// <summary>
+        /// Checks if Registration No is in correct format i.e it only have ketters
+        /// </summary>
+        /// <param name="input">input Registration string entered by user</param>
+        /// <returns>Return Invalid Registration Number if it has anything other than letters</returns>
         public string ErrorRegistrationNo(string input)
         {
             errorRegistrationNo = "";
@@ -270,6 +323,10 @@ namespace Student_Management_System
 
         }
 
+        /// <summary>
+        /// Checks if Registration nummber or email already exist in table
+        /// </summary>
+        /// <returns>Returns true if record exists in table</returns>
         public bool recordAlreadyExist()
         {
             string cmd = "SELECT * FROM Student WHERE RegistrationNumber='" + registrationNo + "'OR Email='" + email + "'";
@@ -287,6 +344,10 @@ namespace Student_Management_System
             }
         }
 
+        /// <summary>
+        /// Add students' data tu Students table and then show data in grid.
+        /// </summary>
+        /// <returns>Returns DataTable containing data fetched from Students Table</returns>
         public DataTable addStudent()
         {
             try
@@ -317,7 +378,11 @@ namespace Student_Management_System
             }
         }
 
-
+        /// <summary>
+        /// Update data of particular record and then show updated record in grid
+        /// </summary>
+        /// <param name="id">Id of particular row clicked by user whose data is to be edited</param>
+        /// <returns>Returns DataTable Containing data fetched from table after updation.</returns>
         public DataTable Edit(int id)
         {
             string cmd = "UPDATE Student SET FirstName = '" + firstName + "', LastName = '" + lastName + "', Contact = '" + contact + "', Email = '" + email + "', RegistrationNumber = '" + registrationNo + "', Status = '" + status + "' WHERE Id = '" + id + "'";
@@ -330,6 +395,11 @@ namespace Student_Management_System
             return dt;
         }
 
+        /// <summary>
+        /// Delete data of particular record and then show updated record in grid
+        /// </summary>
+        /// <param name="id">Id of particular row clicked by user whose data is to be Deleted</param>
+        /// <returns>Returns DataTable Containing data fetched from table after deletion.</returns>
         public DataTable Delete(int id)
         {
             string cmd = "DELETE FROM Student WHERE Id = '" + id + "'";

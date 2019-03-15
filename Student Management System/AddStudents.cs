@@ -199,6 +199,7 @@ namespace Student_Management_System
         private void btn_AddClo_Click(object sender, EventArgs e)
         {
             Clo.getInstance().Show();
+            Clo.getInstance().Refresh();
             Clo.getInstance().Location = this.Location;
             this.Hide();
         }
@@ -206,6 +207,7 @@ namespace Student_Management_System
         private void btn_AddRubrics_Click(object sender, EventArgs e)
         {
             Rubric.getInstance().Show();
+            Rubric.getInstance().Refresh();
             Rubric.getInstance().Location = this.Location;
             this.Hide();
         }
