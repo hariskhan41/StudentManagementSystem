@@ -42,7 +42,6 @@
             this.lbl_ErrorRegistrationNo = new System.Windows.Forms.Label();
             this.lbl_ErrorLastName = new System.Windows.Forms.Label();
             this.lbl_ErrorEmail = new System.Windows.Forms.Label();
-            this.lbl_ErrorStatus = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,48 +57,63 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.txt_RegistrationNo = new System.Windows.Forms.TextBox();
             this.lbl_Status = new System.Windows.Forms.Label();
-            this.txt_Status = new System.Windows.Forms.TextBox();
             this.lbl_RegistrationNo = new System.Windows.Forms.Label();
             this.btn_Update = new System.Windows.Forms.Button();
             this.studentTableAdapter = new Student_Management_System.ProjectBDataSetTableAdapters.StudentTableAdapter();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_AddStudents = new System.Windows.Forms.Button();
+            this.btn_AddClo = new System.Windows.Forms.Button();
+            this.btn_AddRubrics = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_Cancel = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.cmb_Status = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_FirstName
             // 
-            this.txt_FirstName.Location = new System.Drawing.Point(137, 87);
+            this.txt_FirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_FirstName.Location = new System.Drawing.Point(351, 91);
             this.txt_FirstName.Name = "txt_FirstName";
-            this.txt_FirstName.Size = new System.Drawing.Size(752, 20);
+            this.txt_FirstName.Size = new System.Drawing.Size(847, 20);
             this.txt_FirstName.TabIndex = 0;
             // 
             // txt_LastName
             // 
-            this.txt_LastName.Location = new System.Drawing.Point(137, 127);
+            this.txt_LastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_LastName.Location = new System.Drawing.Point(351, 131);
             this.txt_LastName.Name = "txt_LastName";
-            this.txt_LastName.Size = new System.Drawing.Size(752, 20);
+            this.txt_LastName.Size = new System.Drawing.Size(847, 20);
             this.txt_LastName.TabIndex = 1;
             // 
             // txt_Contact
             // 
-            this.txt_Contact.Location = new System.Drawing.Point(137, 171);
+            this.txt_Contact.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Contact.Location = new System.Drawing.Point(351, 175);
             this.txt_Contact.Name = "txt_Contact";
-            this.txt_Contact.Size = new System.Drawing.Size(752, 20);
+            this.txt_Contact.Size = new System.Drawing.Size(847, 20);
             this.txt_Contact.TabIndex = 2;
             // 
             // txt_Email
             // 
-            this.txt_Email.Location = new System.Drawing.Point(137, 259);
+            this.txt_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Email.Location = new System.Drawing.Point(351, 263);
             this.txt_Email.Name = "txt_Email";
-            this.txt_Email.Size = new System.Drawing.Size(752, 20);
+            this.txt_Email.Size = new System.Drawing.Size(847, 20);
             this.txt_Email.TabIndex = 3;
             // 
             // lbl_FirstName
             // 
-            this.lbl_FirstName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_FirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_FirstName.AutoSize = true;
-            this.lbl_FirstName.Location = new System.Drawing.Point(39, 91);
+            this.lbl_FirstName.Location = new System.Drawing.Point(271, 95);
             this.lbl_FirstName.Name = "lbl_FirstName";
             this.lbl_FirstName.Size = new System.Drawing.Size(57, 13);
             this.lbl_FirstName.TabIndex = 7;
@@ -107,9 +121,9 @@
             // 
             // lbl_LastName
             // 
-            this.lbl_LastName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_LastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_LastName.AutoSize = true;
-            this.lbl_LastName.Location = new System.Drawing.Point(39, 131);
+            this.lbl_LastName.Location = new System.Drawing.Point(271, 135);
             this.lbl_LastName.Name = "lbl_LastName";
             this.lbl_LastName.Size = new System.Drawing.Size(58, 13);
             this.lbl_LastName.TabIndex = 8;
@@ -117,9 +131,9 @@
             // 
             // lbl_Contact
             // 
-            this.lbl_Contact.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_Contact.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Contact.AutoSize = true;
-            this.lbl_Contact.Location = new System.Drawing.Point(39, 175);
+            this.lbl_Contact.Location = new System.Drawing.Point(271, 179);
             this.lbl_Contact.Name = "lbl_Contact";
             this.lbl_Contact.Size = new System.Drawing.Size(44, 13);
             this.lbl_Contact.TabIndex = 9;
@@ -127,9 +141,9 @@
             // 
             // lbl_Email
             // 
-            this.lbl_Email.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Email.AutoSize = true;
-            this.lbl_Email.Location = new System.Drawing.Point(39, 263);
+            this.lbl_Email.Location = new System.Drawing.Point(271, 267);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(32, 13);
             this.lbl_Email.TabIndex = 10;
@@ -137,8 +151,9 @@
             // 
             // lbl_ErrorFirstName
             // 
+            this.lbl_ErrorFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_ErrorFirstName.AutoSize = true;
-            this.lbl_ErrorFirstName.Location = new System.Drawing.Point(137, 107);
+            this.lbl_ErrorFirstName.Location = new System.Drawing.Point(351, 111);
             this.lbl_ErrorFirstName.Name = "lbl_ErrorFirstName";
             this.lbl_ErrorFirstName.Size = new System.Drawing.Size(23, 13);
             this.lbl_ErrorFirstName.TabIndex = 14;
@@ -146,8 +161,9 @@
             // 
             // lbl_ErrorContact
             // 
+            this.lbl_ErrorContact.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_ErrorContact.AutoSize = true;
-            this.lbl_ErrorContact.Location = new System.Drawing.Point(137, 194);
+            this.lbl_ErrorContact.Location = new System.Drawing.Point(351, 198);
             this.lbl_ErrorContact.Name = "lbl_ErrorContact";
             this.lbl_ErrorContact.Size = new System.Drawing.Size(23, 13);
             this.lbl_ErrorContact.TabIndex = 15;
@@ -155,8 +171,9 @@
             // 
             // lbl_ErrorRegistrationNo
             // 
+            this.lbl_ErrorRegistrationNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_ErrorRegistrationNo.AutoSize = true;
-            this.lbl_ErrorRegistrationNo.Location = new System.Drawing.Point(137, 236);
+            this.lbl_ErrorRegistrationNo.Location = new System.Drawing.Point(351, 240);
             this.lbl_ErrorRegistrationNo.Name = "lbl_ErrorRegistrationNo";
             this.lbl_ErrorRegistrationNo.Size = new System.Drawing.Size(23, 13);
             this.lbl_ErrorRegistrationNo.TabIndex = 16;
@@ -164,8 +181,9 @@
             // 
             // lbl_ErrorLastName
             // 
+            this.lbl_ErrorLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_ErrorLastName.AutoSize = true;
-            this.lbl_ErrorLastName.Location = new System.Drawing.Point(137, 150);
+            this.lbl_ErrorLastName.Location = new System.Drawing.Point(351, 154);
             this.lbl_ErrorLastName.Name = "lbl_ErrorLastName";
             this.lbl_ErrorLastName.Size = new System.Drawing.Size(24, 13);
             this.lbl_ErrorLastName.TabIndex = 17;
@@ -173,25 +191,18 @@
             // 
             // lbl_ErrorEmail
             // 
+            this.lbl_ErrorEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_ErrorEmail.AutoSize = true;
-            this.lbl_ErrorEmail.Location = new System.Drawing.Point(137, 280);
+            this.lbl_ErrorEmail.Location = new System.Drawing.Point(351, 284);
             this.lbl_ErrorEmail.Name = "lbl_ErrorEmail";
             this.lbl_ErrorEmail.Size = new System.Drawing.Size(24, 13);
             this.lbl_ErrorEmail.TabIndex = 18;
             this.lbl_ErrorEmail.Text = "asd";
             // 
-            // lbl_ErrorStatus
-            // 
-            this.lbl_ErrorStatus.AutoSize = true;
-            this.lbl_ErrorStatus.Location = new System.Drawing.Point(137, 327);
-            this.lbl_ErrorStatus.Name = "lbl_ErrorStatus";
-            this.lbl_ErrorStatus.Size = new System.Drawing.Size(24, 13);
-            this.lbl_ErrorStatus.TabIndex = 19;
-            this.lbl_ErrorStatus.Text = "asd";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -205,9 +216,9 @@
             this.Delete});
             this.dataGridView1.DataSource = this.studentBindingSource;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlText;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 419);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(944, 197);
+            this.dataGridView1.Size = new System.Drawing.Size(975, 228);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -280,9 +291,9 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(58, 364);
+            this.btn_Add.Location = new System.Drawing.Point(321, 354);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(396, 25);
+            this.btn_Add.Size = new System.Drawing.Size(255, 25);
             this.btn_Add.TabIndex = 13;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -290,34 +301,28 @@
             // 
             // txt_RegistrationNo
             // 
-            this.txt_RegistrationNo.Location = new System.Drawing.Point(137, 215);
+            this.txt_RegistrationNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_RegistrationNo.Location = new System.Drawing.Point(351, 219);
             this.txt_RegistrationNo.Name = "txt_RegistrationNo";
-            this.txt_RegistrationNo.Size = new System.Drawing.Size(752, 20);
+            this.txt_RegistrationNo.Size = new System.Drawing.Size(847, 20);
             this.txt_RegistrationNo.TabIndex = 4;
             // 
             // lbl_Status
             // 
-            this.lbl_Status.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_Status.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_Status.AutoSize = true;
-            this.lbl_Status.Location = new System.Drawing.Point(39, 308);
+            this.lbl_Status.Location = new System.Drawing.Point(271, 312);
             this.lbl_Status.Name = "lbl_Status";
             this.lbl_Status.Size = new System.Drawing.Size(37, 13);
             this.lbl_Status.TabIndex = 12;
             this.lbl_Status.Text = "Status";
             this.lbl_Status.Click += new System.EventHandler(this.lbl_Status_Click);
             // 
-            // txt_Status
-            // 
-            this.txt_Status.Location = new System.Drawing.Point(137, 304);
-            this.txt_Status.Name = "txt_Status";
-            this.txt_Status.Size = new System.Drawing.Size(752, 20);
-            this.txt_Status.TabIndex = 5;
-            // 
             // lbl_RegistrationNo
             // 
-            this.lbl_RegistrationNo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_RegistrationNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_RegistrationNo.AutoSize = true;
-            this.lbl_RegistrationNo.Location = new System.Drawing.Point(39, 219);
+            this.lbl_RegistrationNo.Location = new System.Drawing.Point(271, 223);
             this.lbl_RegistrationNo.Name = "lbl_RegistrationNo";
             this.lbl_RegistrationNo.Size = new System.Drawing.Size(73, 13);
             this.lbl_RegistrationNo.TabIndex = 11;
@@ -325,9 +330,9 @@
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(493, 364);
+            this.btn_Update.Location = new System.Drawing.Point(611, 355);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(396, 23);
+            this.btn_Update.Size = new System.Drawing.Size(255, 23);
             this.btn_Update.TabIndex = 25;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
@@ -337,18 +342,141 @@
             // 
             this.studentTableAdapter.ClearBeforeFill = true;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
+            this.tableLayoutPanel1.Controls.Add(this.btn_AddStudents, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_AddClo, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btn_AddRubrics, 0, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 53);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.259528F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 345F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(237, 577);
+            this.tableLayoutPanel1.TabIndex = 26;
+            // 
+            // btn_AddStudents
+            // 
+            this.btn_AddStudents.CausesValidation = false;
+            this.btn_AddStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AddStudents.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_AddStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddStudents.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddStudents.Location = new System.Drawing.Point(3, 85);
+            this.btn_AddStudents.Name = "btn_AddStudents";
+            this.btn_AddStudents.Size = new System.Drawing.Size(231, 44);
+            this.btn_AddStudents.TabIndex = 0;
+            this.btn_AddStudents.Text = "Add Students";
+            this.btn_AddStudents.UseVisualStyleBackColor = true;
+            this.btn_AddStudents.Click += new System.EventHandler(this.btn_AddStudents_Click);
+            // 
+            // btn_AddClo
+            // 
+            this.btn_AddClo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AddClo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_AddClo.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_AddClo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddClo.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddClo.Location = new System.Drawing.Point(3, 135);
+            this.btn_AddClo.Name = "btn_AddClo";
+            this.btn_AddClo.Size = new System.Drawing.Size(231, 44);
+            this.btn_AddClo.TabIndex = 1;
+            this.btn_AddClo.Text = "Add CLOs";
+            this.btn_AddClo.UseVisualStyleBackColor = true;
+            this.btn_AddClo.Click += new System.EventHandler(this.btn_AddClo_Click);
+            // 
+            // btn_AddRubrics
+            // 
+            this.btn_AddRubrics.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AddRubrics.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_AddRubrics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddRubrics.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddRubrics.Location = new System.Drawing.Point(3, 185);
+            this.btn_AddRubrics.Name = "btn_AddRubrics";
+            this.btn_AddRubrics.Size = new System.Drawing.Size(231, 44);
+            this.btn_AddRubrics.TabIndex = 2;
+            this.btn_AddRubrics.Text = "Add Rubrics";
+            this.btn_AddRubrics.UseVisualStyleBackColor = true;
+            this.btn_AddRubrics.Click += new System.EventHandler(this.btn_AddRubrics_Click);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1224F));
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1224, 60);
+            this.tableLayoutPanel2.TabIndex = 27;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(601, 50);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Student Management System";
+            // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.Location = new System.Drawing.Point(899, 355);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(254, 23);
+            this.btn_Cancel.TabIndex = 29;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(243, 396);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(981, 234);
+            this.tableLayoutPanel3.TabIndex = 30;
+            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
+            // 
+            // cmb_Status
+            // 
+            this.cmb_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Status.FormattingEnabled = true;
+            this.cmb_Status.Location = new System.Drawing.Point(351, 312);
+            this.cmb_Status.Name = "cmb_Status";
+            this.cmb_Status.Size = new System.Drawing.Size(847, 21);
+            this.cmb_Status.TabIndex = 31;
+            // 
             // AddStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 628);
+            this.ClientSize = new System.Drawing.Size(1224, 628);
+            this.Controls.Add(this.cmb_Status);
+            this.Controls.Add(this.btn_Cancel);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lbl_LastName);
             this.Controls.Add(this.lbl_FirstName);
             this.Controls.Add(this.txt_LastName);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.lbl_Email);
             this.Controls.Add(this.txt_FirstName);
-            this.Controls.Add(this.txt_Status);
             this.Controls.Add(this.lbl_Status);
             this.Controls.Add(this.txt_Contact);
             this.Controls.Add(this.txt_Email);
@@ -356,8 +484,6 @@
             this.Controls.Add(this.lbl_ErrorLastName);
             this.Controls.Add(this.lbl_Contact);
             this.Controls.Add(this.lbl_ErrorEmail);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lbl_ErrorStatus);
             this.Controls.Add(this.lbl_RegistrationNo);
             this.Controls.Add(this.lbl_ErrorFirstName);
             this.Controls.Add(this.lbl_ErrorRegistrationNo);
@@ -369,6 +495,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,12 +519,10 @@
         private System.Windows.Forms.Label lbl_ErrorRegistrationNo;
         private System.Windows.Forms.Label lbl_ErrorLastName;
         private System.Windows.Forms.Label lbl_ErrorEmail;
-        private System.Windows.Forms.Label lbl_ErrorStatus;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.TextBox txt_RegistrationNo;
         private System.Windows.Forms.Label lbl_Status;
-        private System.Windows.Forms.TextBox txt_Status;
         private System.Windows.Forms.Label lbl_RegistrationNo;
         private System.Windows.Forms.Button btn_Update;
         private ProjectBDataSet projectBDataSet;
@@ -409,5 +537,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button btn_AddStudents;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_AddClo;
+        private System.Windows.Forms.Button btn_AddRubrics;
+        private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.ComboBox cmb_Status;
     }
 }

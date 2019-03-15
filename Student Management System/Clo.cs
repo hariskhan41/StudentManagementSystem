@@ -15,12 +15,21 @@ namespace Student_Management_System
         int id;
         string dateCreated;
 
+        private static Clo instance;
+
         public Clo()
         {
             InitializeComponent();
         }
 
-
+        public static Clo getInstance()
+        {
+            if (instance == null)
+            {
+                instance = new Clo();
+            }
+            return instance;
+        }
 
 
 
@@ -34,11 +43,26 @@ namespace Student_Management_System
             lbl_ErrorName.Text = c.ErrorName(c.name);
             lbl_ErrorName.ForeColor = System.Drawing.Color.Red;
             lbl_ErrorName.Refresh();
-            if (lbl_ErrorName.Text == "")
+            if (string.IsNullOrEmpty(txt_CloName.Text))
             {
-                c.add();
-                DataTable dt = c.ShowInGrid();
-                dataGridView1.DataSource = dt;
+                lbl_ErrorName.Text = "Invalid Clo Name";
+                lbl_ErrorName.ForeColor = System.Drawing.Color.Red;
+                lbl_ErrorName.Refresh();
+            }
+            else if (lbl_ErrorName.Text == "")
+            {
+                
+                if (c.CloAlreadyExist(txt_CloName.Text))
+                {
+                    MessageBox.Show("CLO Aready Exists");
+                }
+                else
+                {
+                    c.add();
+                    txt_CloName.Clear();
+                    DataTable dt = c.ShowInGrid();
+                    dataGridView1.DataSource = dt;
+                }
             }
         }
 
@@ -46,9 +70,18 @@ namespace Student_Management_System
         {
             // TODO: This line of code loads data into the 'projectBDataSet1.Clo' table. You can move, or remove it, as needed.
             this.cloTableAdapter.Fill(this.projectBDataSet1.Clo);
+
+            lbl_ErrorName.Text = "";
+
+            btn_AddClo.Enabled = false;
+            btn_AddClo.BackColor = Color.Gray;
+
             AddClo c = new AddClo();
             DataTable dt = c.ShowInGrid();
             dataGridView1.DataSource = dt;
+
+            btn_Update.Enabled = false;
+            btn_Add.Enabled = true;
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
@@ -58,6 +91,9 @@ namespace Student_Management_System
             c.dateUpdated = DateTime.Now;
             DataTable dt = c.Edit(id);
             dataGridView1.DataSource = dt;
+            txt_CloName.Clear();
+            btn_Add.Enabled = true;
+            btn_Update.Enabled = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -66,10 +102,13 @@ namespace Student_Management_System
 
             if (value == "Edit")
             {
+                btn_Add.Enabled = false;
                 string id1 = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
                 id = Convert.ToInt32(id1);
                 txt_CloName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
                 dateCreated = dataGridView1.Rows[e.RowIndex].Cells[2].FormattedValue.ToString();
+                btn_Add.Enabled = false;
+                btn_Update.Enabled = true;
             }
             else if (value == "Delete")
             {
@@ -78,8 +117,32 @@ namespace Student_Management_System
 
                 AddClo c = new AddClo();
                 c.Delete(id);
-                c.ShowInGrid();
+                //c.ShowInGrid();
+                DataTable dt = c.ShowInGrid();
+                dataGridView1.DataSource = dt;
+                btn_Update.Enabled = false;
             }
+        }
+
+        private void btn_AddStudents_Click(object sender, EventArgs e)
+        {
+            AddStudents.getInstance().Show();
+            AddStudents.getInstance().Location = this.Location;
+            this.Hide();
+        }
+
+        private void btn_AddRubrics_Click(object sender, EventArgs e)
+        {
+            Rubric.getInstance().Show();
+            Rubric.getInstance().Location = this.Location;
+            this.Hide();
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            txt_CloName.Clear();
+            btn_Add.Enabled = true;
+            btn_Update.Enabled = false;
         }
     }
 }

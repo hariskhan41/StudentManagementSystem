@@ -38,6 +38,43 @@ namespace Student_Management_System
         public string errorStatus { get; set; }
 
 
+        public void AddToComboBox(ComboBox cmb)
+        {
+            string cmd = "SELECT * FROM Lookup";
+            SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            while (d.Read())
+            {
+                string n = d.GetString(1);
+                cmb.Items.Add(n);
+            }
+        }
+
+        public int getLookupIdByStatus(string input)
+        {
+            int Lid = 0;
+            string cmd = "SELECT * FROM Lookup WHERE Name = '" + input + "'";
+            SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            while (d.Read())
+            {
+                Lid = d.GetInt32(0);
+                break;
+            }
+            return Lid;
+        }
+
+        public string getCategoryNameById(int id)
+        {
+            string CategoryName = "";
+            string cmd = "SELECT * FROM Lookup WHERE LookupId = '" + id + "'";
+            SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            while (d.Read())
+            {
+                CategoryName = d.GetString(2);
+                break;
+            }
+            return CategoryName;
+        }
+
 
 
         public bool isDigit(string input)
@@ -96,7 +133,7 @@ namespace Student_Management_System
         public string ErrorFirstName(string input)
         {
             errorFirstName = "";
-            if (isDigit(firstName) == false)
+            if (isDigit(firstName) == false || string.IsNullOrEmpty(input))
             {
                 errorFirstName = "Invalid First Name!";
             }
@@ -107,7 +144,7 @@ namespace Student_Management_System
         public string ErrorLastName(string input)
         {
             errorLastName = "";
-            if (isDigit(lastName) == false)
+            if (isDigit(lastName) == false || string.IsNullOrEmpty(input))
             {
                 errorLastName = "Invalid Last Name!";
             }
@@ -117,7 +154,7 @@ namespace Student_Management_System
         public string ErrorContact(string input)
         {
             errorContact = "";
-            if (isContact(contact) == true || contact.Length != 11)
+            if (isContact(contact) == true || contact.Length != 11 || string.IsNullOrEmpty(input))
             {
                 errorContact = "Invalid Contact";
             }
@@ -127,7 +164,7 @@ namespace Student_Management_System
         public string ErrorEmail(string input)
         {
             errorEmail = "";
-            if (isEmail(input) == false)
+            if (isEmail(input) == false || string.IsNullOrEmpty(input))
             {
                 errorEmail = "Invalid Email! (syntax: abc@example.com)";
             }
@@ -141,6 +178,11 @@ namespace Student_Management_System
             int count = input.Length;
             //char[] arr2;
             if (count != 11 && count != 12)
+            {
+                errorRegistrationNo = "Invalid Registration No. (syntax: 2016-XXX-999)";
+                return errorRegistrationNo;
+            }
+            else if (string.IsNullOrEmpty(input))
             {
                 errorRegistrationNo = "Invalid Registration No. (syntax: 2016-XXX-999)";
                 return errorRegistrationNo;

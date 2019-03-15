@@ -14,9 +14,20 @@ namespace Student_Management_System
     {
         int id;
         int idEdit;
+
+        private static Rubric instance;
         public Rubric()
         {
             InitializeComponent();
+        }
+
+        public static Rubric getInstance()
+        {
+            if (instance == null)
+            {
+                instance = new Rubric();
+            }
+            return instance;
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -43,10 +54,17 @@ namespace Student_Management_System
         {
             // TODO: This line of code loads data into the 'projectBDataSet2.Rubric' table. You can move, or remove it, as needed.
             this.rubricTableAdapter.Fill(this.projectBDataSet2.Rubric);
+
+            btn_AddRubrics.Enabled = false;
+            btn_AddRubrics.BackColor = Color.Gray;
+
             Rubrics r = new Rubrics();
             r.AddToComboBox(cmb_CLO);
             DataTable dt = r.ShowInGrid();
             dataGridView1.DataSource = dt;
+
+            btn_Update.Enabled = false;
+            btn_Add.Enabled = true;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -66,6 +84,8 @@ namespace Student_Management_System
                 string CloName = r1.getCloNameById(cloid);
 
                 cmb_CLO.Text = CloName;
+                btn_Add.Enabled = false;
+                btn_Update.Enabled = true;
                 //cmb_CLO.Text = dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
             }
             else if (value == "Delete")
@@ -88,6 +108,28 @@ namespace Student_Management_System
             r2.Edit(idEdit);
             DataTable dt = r2.ShowInGrid();
             dataGridView1.DataSource = dt;
+            txt_Details.Clear();
+        }
+
+        private void btn_AddStudents_Click(object sender, EventArgs e)
+        {
+            AddStudents.getInstance().Show();
+            AddStudents.getInstance().Location = this.Location;
+            this.Hide();
+        }
+
+        private void btn_AddClo_Click(object sender, EventArgs e)
+        {
+            Clo.getInstance().Show();
+            Clo.getInstance().Location = this.Location;
+            this.Hide();
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            txt_Details.Clear();
+            btn_Update.Enabled = false;
+            btn_Add.Enabled = true;
         }
     }
 }

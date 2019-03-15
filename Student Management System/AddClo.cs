@@ -34,6 +34,23 @@ namespace Student_Management_System
             return errorName;
         }
 
+        public bool CloAlreadyExist(string name)
+        {
+            string cmd = "SELECT * FROM Clo WHERE Name = '" + name + "'";
+            SqlDataAdapter sqlDA = DatabaseConnection.getInstance().Query(cmd);
+            DataSet ds = new DataSet();
+            sqlDA.Fill(ds);
+            int i = ds.Tables[0].Rows.Count;
+            if (i > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
         public void add()
         {

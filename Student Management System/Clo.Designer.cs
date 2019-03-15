@@ -44,15 +44,26 @@
             this.btn_Update = new System.Windows.Forms.Button();
             this.cloTableAdapter = new Student_Management_System.ProjectBDataSet1TableAdapters.CloTableAdapter();
             this.lbl_ErrorName = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_AddStudents = new System.Windows.Forms.Button();
+            this.btn_AddClo = new System.Windows.Forms.Button();
+            this.btn_AddRubrics = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_CloName
             // 
             this.lbl_CloName.AutoSize = true;
-            this.lbl_CloName.Location = new System.Drawing.Point(176, 46);
+            this.lbl_CloName.Location = new System.Drawing.Point(264, 108);
             this.lbl_CloName.Name = "lbl_CloName";
             this.lbl_CloName.Size = new System.Drawing.Size(35, 13);
             this.lbl_CloName.TabIndex = 0;
@@ -60,16 +71,16 @@
             // 
             // txt_CloName
             // 
-            this.txt_CloName.Location = new System.Drawing.Point(350, 42);
+            this.txt_CloName.Location = new System.Drawing.Point(335, 105);
             this.txt_CloName.Name = "txt_CloName";
-            this.txt_CloName.Size = new System.Drawing.Size(166, 20);
+            this.txt_CloName.Size = new System.Drawing.Size(837, 20);
             this.txt_CloName.TabIndex = 1;
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(350, 106);
+            this.btn_Add.Location = new System.Drawing.Point(281, 207);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(75, 35);
+            this.btn_Add.Size = new System.Drawing.Size(291, 23);
             this.btn_Add.TabIndex = 2;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -78,6 +89,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -87,9 +99,10 @@
             this.Edit,
             this.Delete});
             this.dataGridView1.DataSource = this.cloBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 162);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(643, 147);
+            this.dataGridView1.RowHeadersWidth = 60;
+            this.dataGridView1.Size = new System.Drawing.Size(939, 370);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -148,9 +161,9 @@
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(246, 106);
+            this.btn_Update.Location = new System.Drawing.Point(578, 207);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(75, 35);
+            this.btn_Update.Size = new System.Drawing.Size(291, 23);
             this.btn_Update.TabIndex = 4;
             this.btn_Update.Text = "Update";
             this.btn_Update.UseVisualStyleBackColor = true;
@@ -163,20 +176,133 @@
             // lbl_ErrorName
             // 
             this.lbl_ErrorName.AutoSize = true;
-            this.lbl_ErrorName.Location = new System.Drawing.Point(347, 75);
+            this.lbl_ErrorName.Location = new System.Drawing.Point(332, 136);
             this.lbl_ErrorName.Name = "lbl_ErrorName";
             this.lbl_ErrorName.Size = new System.Drawing.Size(35, 13);
             this.lbl_ErrorName.TabIndex = 5;
             this.lbl_ErrorName.Text = "label1";
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1167F));
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1184, 60);
+            this.tableLayoutPanel2.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(601, 50);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Student Management System";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
+            this.tableLayoutPanel1.Controls.Add(this.btn_AddStudents, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_AddClo, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btn_AddRubrics, 0, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 60);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.259528F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 345F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(237, 568);
+            this.tableLayoutPanel1.TabIndex = 29;
+            // 
+            // btn_AddStudents
+            // 
+            this.btn_AddStudents.CausesValidation = false;
+            this.btn_AddStudents.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AddStudents.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_AddStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddStudents.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddStudents.Location = new System.Drawing.Point(3, 76);
+            this.btn_AddStudents.Name = "btn_AddStudents";
+            this.btn_AddStudents.Size = new System.Drawing.Size(231, 44);
+            this.btn_AddStudents.TabIndex = 0;
+            this.btn_AddStudents.Text = "Add Students";
+            this.btn_AddStudents.UseVisualStyleBackColor = true;
+            this.btn_AddStudents.Click += new System.EventHandler(this.btn_AddStudents_Click);
+            // 
+            // btn_AddClo
+            // 
+            this.btn_AddClo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AddClo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_AddClo.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_AddClo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddClo.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddClo.Location = new System.Drawing.Point(3, 126);
+            this.btn_AddClo.Name = "btn_AddClo";
+            this.btn_AddClo.Size = new System.Drawing.Size(231, 44);
+            this.btn_AddClo.TabIndex = 1;
+            this.btn_AddClo.Text = "Add CLOs";
+            this.btn_AddClo.UseVisualStyleBackColor = true;
+            // 
+            // btn_AddRubrics
+            // 
+            this.btn_AddRubrics.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AddRubrics.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_AddRubrics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddRubrics.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddRubrics.Location = new System.Drawing.Point(3, 176);
+            this.btn_AddRubrics.Name = "btn_AddRubrics";
+            this.btn_AddRubrics.Size = new System.Drawing.Size(231, 44);
+            this.btn_AddRubrics.TabIndex = 2;
+            this.btn_AddRubrics.Text = "Add Rubrics";
+            this.btn_AddRubrics.UseVisualStyleBackColor = true;
+            this.btn_AddRubrics.Click += new System.EventHandler(this.btn_AddRubrics_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(239, 252);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(945, 376);
+            this.tableLayoutPanel3.TabIndex = 30;
+            // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.Location = new System.Drawing.Point(875, 207);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(291, 23);
+            this.btn_Cancel.TabIndex = 31;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            // 
             // Clo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 321);
+            this.ClientSize = new System.Drawing.Size(1184, 628);
+            this.Controls.Add(this.btn_Cancel);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.lbl_ErrorName);
             this.Controls.Add(this.btn_Update);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.txt_CloName);
             this.Controls.Add(this.lbl_CloName);
@@ -186,6 +312,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,12 +331,20 @@
         private ProjectBDataSet1 projectBDataSet1;
         private System.Windows.Forms.BindingSource cloBindingSource;
         private ProjectBDataSet1TableAdapters.CloTableAdapter cloTableAdapter;
+        private System.Windows.Forms.Label lbl_ErrorName;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btn_AddStudents;
+        private System.Windows.Forms.Button btn_AddClo;
+        private System.Windows.Forms.Button btn_AddRubrics;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateCreatedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateUpdatedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.Label lbl_ErrorName;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btn_Cancel;
     }
 }
