@@ -207,6 +207,11 @@ namespace Student_Management_System
         private void btn_AddRubrics_Click(object sender, EventArgs e)
         {
             Rubric.getInstance().Show();
+
+            Rubrics r = new Rubrics();
+            Rubric.getInstance().cmb_CLO.Items.Clear();
+            r.AddToComboBox(Rubric.getInstance().cmb_CLO);
+
             Rubric.getInstance().Refresh();
             Rubric.getInstance().Location = this.Location;
             this.Hide();
@@ -226,6 +231,22 @@ namespace Student_Management_System
             txt_RegistrationNo.Clear();
             btn_Add.Enabled = true;
             btn_Update.Enabled = false;
+        }
+
+        private void btn_RubricLevel_Click(object sender, EventArgs e)
+        {
+            RubricLevel.getInstance().Show();
+            RubricLevel.getInstance().Refresh();
+            RubricLevel.getInstance().Location = this.Location;
+            this.Hide();
+        }
+
+        private void btn_Assessment_Click(object sender, EventArgs e)
+        {
+            Assessment.getInstance().Show();
+            Assessment.getInstance().Refresh();
+            Assessment.getInstance().Location = this.Location;
+            this.Hide();
         }
     }
 }

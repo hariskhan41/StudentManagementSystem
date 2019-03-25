@@ -151,5 +151,13 @@ namespace Student_Management_System
             btn_Add.Enabled = true;
             btn_Update.Enabled = false;
         }
+
+        private void btn_Assessment_Click(object sender, EventArgs e)
+        {
+            Assessment.getInstance().Show();
+            Assessment.getInstance().Refresh();
+            Assessment.getInstance().Location = this.Location;
+            this.Hide();
+        }
     }
 }

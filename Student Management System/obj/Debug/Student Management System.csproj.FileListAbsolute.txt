@@ -9,3 +9,5 @@ F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Manageme
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.CLO.resources
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student Management System.csprojResolveAssemblyReference.cache
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Rubric.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Assessment.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.RubricLevel.resources

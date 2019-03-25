@@ -54,6 +54,7 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Assessment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubricBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet2)).BeginInit();
@@ -199,7 +200,7 @@
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1167F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1184F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
@@ -230,14 +231,16 @@
             this.tableLayoutPanel1.Controls.Add(this.btn_AddStudents, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_AddClo, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.btn_AddRubrics, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Assessment, 0, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.259528F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 345F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 317F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(237, 568);
             this.tableLayoutPanel1.TabIndex = 30;
             // 
@@ -248,7 +251,7 @@
             this.btn_AddStudents.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btn_AddStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddStudents.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddStudents.Location = new System.Drawing.Point(3, 76);
+            this.btn_AddStudents.Location = new System.Drawing.Point(3, 56);
             this.btn_AddStudents.Name = "btn_AddStudents";
             this.btn_AddStudents.Size = new System.Drawing.Size(231, 44);
             this.btn_AddStudents.TabIndex = 0;
@@ -263,7 +266,7 @@
             this.btn_AddClo.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btn_AddClo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddClo.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddClo.Location = new System.Drawing.Point(3, 126);
+            this.btn_AddClo.Location = new System.Drawing.Point(3, 106);
             this.btn_AddClo.Name = "btn_AddClo";
             this.btn_AddClo.Size = new System.Drawing.Size(231, 44);
             this.btn_AddClo.TabIndex = 1;
@@ -277,7 +280,7 @@
             this.btn_AddRubrics.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
             this.btn_AddRubrics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddRubrics.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddRubrics.Location = new System.Drawing.Point(3, 176);
+            this.btn_AddRubrics.Location = new System.Drawing.Point(3, 156);
             this.btn_AddRubrics.Name = "btn_AddRubrics";
             this.btn_AddRubrics.Size = new System.Drawing.Size(231, 44);
             this.btn_AddRubrics.TabIndex = 2;
@@ -345,6 +348,20 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(929, 51);
             this.tableLayoutPanel5.TabIndex = 34;
             // 
+            // btn_Assessment
+            // 
+            this.btn_Assessment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Assessment.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_Assessment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Assessment.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Assessment.Location = new System.Drawing.Point(3, 206);
+            this.btn_Assessment.Name = "btn_Assessment";
+            this.btn_Assessment.Size = new System.Drawing.Size(231, 40);
+            this.btn_Assessment.TabIndex = 5;
+            this.btn_Assessment.Text = "Assessment";
+            this.btn_Assessment.UseVisualStyleBackColor = true;
+            this.btn_Assessment.Click += new System.EventHandler(this.btn_Assessment_Click);
+            // 
             // Rubric
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,5 +415,6 @@
         public System.Windows.Forms.ComboBox cmb_CLO;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button btn_Assessment;
     }
 }

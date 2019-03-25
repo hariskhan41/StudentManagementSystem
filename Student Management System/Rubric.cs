@@ -48,6 +48,7 @@ namespace Student_Management_System
             r.AddRubric();
             DataTable dt = r.ShowInGrid();
             dataGridView1.DataSource = dt;
+            txt_Details.Clear();
         }
 
         private void Rubric_Load(object sender, EventArgs e)
@@ -132,6 +133,14 @@ namespace Student_Management_System
             txt_Details.Clear();
             btn_Update.Enabled = false;
             btn_Add.Enabled = true;
+        }
+
+        private void btn_Assessment_Click(object sender, EventArgs e)
+        {
+            Assessment.getInstance().Show();
+            Assessment.getInstance().Refresh();
+            Assessment.getInstance().Location = this.Location;
+            this.Hide();
         }
     }
 }
