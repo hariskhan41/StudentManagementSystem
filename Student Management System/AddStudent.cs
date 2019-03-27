@@ -44,7 +44,7 @@ namespace Student_Management_System
         /// <param name="cmb">ComboBox object in which item list is to be stored</param>
         public void AddToComboBox(ComboBox cmb)
         {
-            string cmd = "SELECT * FROM Lookup";
+            string cmd = "SELECT * FROM Lookup WHERE Category = 'STUDENT_STATUS'";
             SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
             while (d.Read())
             {

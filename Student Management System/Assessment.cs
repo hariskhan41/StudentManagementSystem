@@ -186,5 +186,14 @@ namespace Student_Management_System
             btn_Update.Enabled = false;
             btn_Add.Enabled = true;
         }
+
+        private void btn_AssessmentComponent_Click(object sender, EventArgs e)
+        {
+            AssessmentComponent ass = new AssessmentComponent();
+            ass.Show();
+            ass.Refresh();
+            ass.Location = this.Location;
+            this.Hide();
+        }
     }
 }
