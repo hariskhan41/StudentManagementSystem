@@ -33,22 +33,30 @@ namespace Student_Management_System
         private void btn_Add_Click(object sender, EventArgs e)
         {
             Rubrics r = new Rubrics();
-            id = r.getId();
-            if (id == -1)
+            
+            if (r.DetailsAlreadyExist(txt_Details.Text) == "")
             {
-                id = 0;
+                id = r.getId();
+                if (id == -1)
+                {
+                    id = 0;
+                }
+                else
+                {
+                    id++;
+                }
+                r.Id = id;
+                r.Details = txt_Details.Text;
+                r.CloId = r.getCloId(cmb_CLO.Text);
+                r.AddRubric();
+                DataTable dt = r.ShowInGrid();
+                dataGridView1.DataSource = dt;
+                txt_Details.Clear();
             }
             else
             {
-                id++;
+                MessageBox.Show("Details should be unique");
             }
-            r.Id = id;
-            r.Details = txt_Details.Text;
-            r.CloId = r.getCloId(cmb_CLO.Text);
-            r.AddRubric();
-            DataTable dt = r.ShowInGrid();
-            dataGridView1.DataSource = dt;
-            txt_Details.Clear();
         }
 
         private void Rubric_Load(object sender, EventArgs e)
@@ -166,6 +174,15 @@ namespace Student_Management_System
             Class_Attendance.getInstance().Show();
             Class_Attendance.getInstance().Refresh();
             Class_Attendance.getInstance().Location = this.Location;
+            this.Hide();
+        }
+
+        private void btn_RubricLevel_Click(object sender, EventArgs e)
+        {
+            RubricLevel RL = new RubricLevel();
+            RL.Show();
+            RL.Refresh();
+            RL.Location = this.Location;
             this.Hide();
         }
     }

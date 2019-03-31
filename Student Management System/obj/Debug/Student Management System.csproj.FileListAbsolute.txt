@@ -14,3 +14,4 @@ F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Manageme
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.AssessmentComponent.resources
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Attendance.resources
 F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Class_Attendance.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Result.resources

@@ -100,16 +100,23 @@ namespace Student_Management_System
 
             if (lbl_ErrorTitle.Text == "" && lbl_ErrorTotalMarks.Text == "" && lbl_ErrorTotalWeightage.Text == "")
             {
-                a.title = txt_Title.Text;
-                a.totalMarks = Convert.ToInt32(txt_TotalMarks.Text);
-                a.totalWeightage = Convert.ToInt32(txt_TotalWeightage.Text);
+                if (a.TitleAlreadyExist(txt_Title.Text) == "")
+                {
+                    a.title = txt_Title.Text;
+                    a.totalMarks = Convert.ToInt32(txt_TotalMarks.Text);
+                    a.totalWeightage = Convert.ToInt32(txt_TotalWeightage.Text);
 
-                a.Add();
-                txt_Title.Clear();
-                txt_TotalMarks.Clear();
-                txt_TotalWeightage.Clear();
-                DataTable dt = a.ShowInGrid();
-                dataGridView1.DataSource = dt;
+                    a.Add();
+                    txt_Title.Clear();
+                    txt_TotalMarks.Clear();
+                    txt_TotalWeightage.Clear();
+                    DataTable dt = a.ShowInGrid();
+                    dataGridView1.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Title already exist");
+                }
             }
         }
 
@@ -210,6 +217,15 @@ namespace Student_Management_System
             Class_Attendance.getInstance().Show();
             Class_Attendance.getInstance().Refresh();
             Class_Attendance.getInstance().Location = this.Location;
+            this.Close();
+        }
+
+        private void btn_RubricLevel_Click(object sender, EventArgs e)
+        {
+            RubricLevel RL = new RubricLevel();
+            RL.Show();
+            RL.Refresh();
+            RL.Location = this.Location;
             this.Close();
         }
     }

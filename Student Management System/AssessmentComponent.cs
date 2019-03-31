@@ -227,5 +227,18 @@ namespace Student_Management_System
             Class_Attendance.getInstance().Location = this.Location;
             this.Close();
         }
+
+        private void btn_RubricLevel_Click(object sender, EventArgs e)
+        {
+            RubricLevel RL = new RubricLevel();
+            RL.Show();
+            RL.Refresh();
+            RL.Location = this.Location;
+            this.Close();
+        }
+
+
+
+
     }
 }

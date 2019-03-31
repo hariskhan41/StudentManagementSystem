@@ -60,6 +60,23 @@ namespace Student_Management_System
             }
         }
 
+        public string DetailsAlreadyExist(string details)
+        {
+            string cmd = "SELECT * FROM Rubric WHERE details = '" + details + "'";
+            SqlDataAdapter sqlDA = DatabaseConnection.getInstance().Query(cmd);
+            DataSet ds = new DataSet();
+            sqlDA.Fill(ds);
+            int i = ds.Tables[0].Rows.Count;
+            if (i > 0)
+            {
+                return "Details must be unique";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
 
         /// <summary>
         /// Update data of particular record

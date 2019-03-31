@@ -109,6 +109,30 @@ namespace Student_Management_System
         }
 
 
+        /// <summary>
+        /// Checks if title exist in Assessment table.
+        /// </summary>
+        /// <param name="title">Title entered by user which is to be checked</param>
+        /// <returns>Returns string telling title already exist if title is in database, otherwise an empty string.</returns>
+        public string TitleAlreadyExist(string title)
+        {
+            string cmd = "SELECT * FROM Assessment WHERE Title = '" + title + "'";
+            SqlDataAdapter sqlDA = DatabaseConnection.getInstance().Query(cmd);
+            DataSet ds = new DataSet();
+            sqlDA.Fill(ds);
+            int i = ds.Tables[0].Rows.Count;
+            if (i > 0)
+            {
+                return "Title already exists";
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+
+
         public DataTable ShowInGrid()
         {
             string cmd = "SELECT * FROM Assessment";

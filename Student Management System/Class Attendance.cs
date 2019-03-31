@@ -154,5 +154,14 @@ namespace Student_Management_System
             btn_Update.Enabled = false;
             dateCalender.SetDate(DateTime.Now);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RubricLevel RL = new RubricLevel();
+            RL.Show();
+            RL.Refresh();
+            RL.Location = this.Location;
+            this.Hide();
+        }
     }
 }

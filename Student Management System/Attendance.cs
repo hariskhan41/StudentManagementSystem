@@ -255,8 +255,10 @@ namespace Student_Management_System
             btn_Mark.Enabled = true;
             cmb_Date.Enabled = true;
             cmb_RegNo.Enabled = true;
-            
-            cmb_Date.Text
+
+            cmb_Date.Text = "";
+            cmb_RegNo.Text = "";
+            cmb_Status.Text = "";
         }
 
         private void cmb_Date_SelectedIndexChanged(object sender, EventArgs e)
@@ -269,5 +271,19 @@ namespace Student_Management_System
             MessageBox.Show("You cannot write here");
             cmb_Date.Text = "";
         }
+
+        private void btn_RubricLevel_Click(object sender, EventArgs e)
+        {
+            RubricLevel RL = new RubricLevel();
+            RL.Show();
+            RL.Refresh();
+            RL.Location = this.Location;
+            this.Close();
+        }
+        //RubricLevel RL = new RubricLevel();
+        //RL.Show();
+        //    RL.Refresh();
+        //    RL.Location = this.Location;
+        //    this.Hide();
     }
 }
