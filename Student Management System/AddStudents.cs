@@ -266,5 +266,13 @@ namespace Student_Management_System
             at.Location = this.Location;
             this.Hide();
         }
+
+        private void btn_ClassAttendance_Click(object sender, EventArgs e)
+        {
+            Class_Attendance.getInstance().Show();
+            Class_Attendance.getInstance().Refresh();
+            Class_Attendance.getInstance().Location = this.Location;
+            this.Hide();
+        }
     }
 }

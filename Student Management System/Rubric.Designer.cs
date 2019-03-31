@@ -52,12 +52,12 @@
             this.btn_AddRubrics = new System.Windows.Forms.Button();
             this.btn_Assessment = new System.Windows.Forms.Button();
             this.btn_AssessmentComponent = new System.Windows.Forms.Button();
+            this.btn_StudentAttendance = new System.Windows.Forms.Button();
+            this.btn_ClassAttendance = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Attendance = new System.Windows.Forms.Button();
-            this.btn_Result = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubricBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet2)).BeginInit();
@@ -236,8 +236,8 @@
             this.tableLayoutPanel1.Controls.Add(this.btn_AddRubrics, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn_Assessment, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btn_AssessmentComponent, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Attendance, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Result, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.btn_ClassAttendance, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btn_StudentAttendance, 0, 7);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 60);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
@@ -324,6 +324,34 @@
             this.btn_AssessmentComponent.UseVisualStyleBackColor = true;
             this.btn_AssessmentComponent.Click += new System.EventHandler(this.btn_AssessmentComponent_Click);
             // 
+            // btn_StudentAttendance
+            // 
+            this.btn_StudentAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_StudentAttendance.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_StudentAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_StudentAttendance.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_StudentAttendance.Location = new System.Drawing.Point(3, 282);
+            this.btn_StudentAttendance.Name = "btn_StudentAttendance";
+            this.btn_StudentAttendance.Size = new System.Drawing.Size(231, 35);
+            this.btn_StudentAttendance.TabIndex = 7;
+            this.btn_StudentAttendance.Text = "Student Attendance";
+            this.btn_StudentAttendance.UseVisualStyleBackColor = true;
+            this.btn_StudentAttendance.Click += new System.EventHandler(this.btn_Attendance_Click);
+            // 
+            // btn_ClassAttendance
+            // 
+            this.btn_ClassAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ClassAttendance.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_ClassAttendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ClassAttendance.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ClassAttendance.Location = new System.Drawing.Point(3, 240);
+            this.btn_ClassAttendance.Name = "btn_ClassAttendance";
+            this.btn_ClassAttendance.Size = new System.Drawing.Size(231, 35);
+            this.btn_ClassAttendance.TabIndex = 9;
+            this.btn_ClassAttendance.Text = "Class Attendance";
+            this.btn_ClassAttendance.UseVisualStyleBackColor = true;
+            this.btn_ClassAttendance.Click += new System.EventHandler(this.btn_ClassAttendance_Click);
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -385,33 +413,6 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(929, 51);
             this.tableLayoutPanel5.TabIndex = 34;
             // 
-            // btn_Attendance
-            // 
-            this.btn_Attendance.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Attendance.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btn_Attendance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Attendance.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Attendance.Location = new System.Drawing.Point(3, 240);
-            this.btn_Attendance.Name = "btn_Attendance";
-            this.btn_Attendance.Size = new System.Drawing.Size(231, 35);
-            this.btn_Attendance.TabIndex = 7;
-            this.btn_Attendance.Text = "Attendance";
-            this.btn_Attendance.UseVisualStyleBackColor = true;
-            this.btn_Attendance.Click += new System.EventHandler(this.btn_Attendance_Click);
-            // 
-            // btn_Result
-            // 
-            this.btn_Result.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Result.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btn_Result.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Result.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Result.Location = new System.Drawing.Point(3, 282);
-            this.btn_Result.Name = "btn_Result";
-            this.btn_Result.Size = new System.Drawing.Size(231, 35);
-            this.btn_Result.TabIndex = 9;
-            this.btn_Result.Text = "Result";
-            this.btn_Result.UseVisualStyleBackColor = true;
-            // 
             // Rubric
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,7 +468,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Button btn_Assessment;
         private System.Windows.Forms.Button btn_AssessmentComponent;
-        private System.Windows.Forms.Button btn_Attendance;
-        private System.Windows.Forms.Button btn_Result;
+        private System.Windows.Forms.Button btn_StudentAttendance;
+        private System.Windows.Forms.Button btn_ClassAttendance;
     }
 }

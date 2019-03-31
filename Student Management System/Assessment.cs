@@ -195,5 +195,22 @@ namespace Student_Management_System
             ass.Location = this.Location;
             this.Hide();
         }
+
+        private void btn_Attendance_Click(object sender, EventArgs e)
+        {
+            Attendance at = new Attendance();
+            at.Show();
+            at.Refresh();
+            at.Location = this.Location;
+            this.Hide();
+        }
+
+        private void btn_Result_Click(object sender, EventArgs e)
+        {
+            Class_Attendance.getInstance().Show();
+            Class_Attendance.getInstance().Refresh();
+            Class_Attendance.getInstance().Location = this.Location;
+            this.Close();
+        }
     }
 }

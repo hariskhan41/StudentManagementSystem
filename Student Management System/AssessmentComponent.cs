@@ -219,5 +219,13 @@ namespace Student_Management_System
             btn_Add.Enabled = true;
             btn_Update.Enabled = false;
         }
+
+        private void btn_ClassAttendance_Click(object sender, EventArgs e)
+        {
+            Class_Attendance.getInstance().Show();
+            Class_Attendance.getInstance().Refresh();
+            Class_Attendance.getInstance().Location = this.Location;
+            this.Close();
+        }
     }
 }
