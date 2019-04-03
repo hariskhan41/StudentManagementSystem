@@ -81,6 +81,17 @@ namespace Student_Management_System
                 DateTime d1 = Convert.ToDateTime(date1); 
                 dateCalender.SetDate(d1);
             }
+            else if (value == "Delete")
+            {
+                string id1 = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+                id = Convert.ToInt32(id1);
+
+                MarkAttendance MA = new MarkAttendance();
+                MA.DeleteClassAtt(id);
+
+                DataTable dt = MA.ShowClassAttInGrid();
+                dataGridView1.DataSource = dt;
+            }
         }
 
         private void btn_AddStudents_Click(object sender, EventArgs e)
@@ -161,6 +172,15 @@ namespace Student_Management_System
             RL.Show();
             RL.Refresh();
             RL.Location = this.Location;
+            this.Hide();
+        }
+
+        private void btn_Result_Click(object sender, EventArgs e)
+        {
+            Result R = new Result();
+            R.Show();
+            R.Refresh();
+            R.Location = this.Location;
             this.Hide();
         }
     }

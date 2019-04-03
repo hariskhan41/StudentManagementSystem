@@ -34,7 +34,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_AddStudents = new System.Windows.Forms.Button();
             this.btn_AddClo = new System.Windows.Forms.Button();
-            this.btn_AddRubrics = new System.Windows.Forms.Button();
             this.btn_Assessment = new System.Windows.Forms.Button();
             this.btn_AssessmentComponent = new System.Windows.Forms.Button();
             this.btn_ClassAttendance = new System.Windows.Forms.Button();
@@ -43,29 +42,36 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_Result = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.cmb_RubricLevel = new System.Windows.Forms.ComboBox();
+            this.cmb_Rubrics = new System.Windows.Forms.ComboBox();
+            this.cmb_AssessmentComponent = new System.Windows.Forms.ComboBox();
+            this.cmb_Assessment = new System.Windows.Forms.ComboBox();
             this.lbl_Student = new System.Windows.Forms.Label();
             this.lbl_Assessment = new System.Windows.Forms.Label();
             this.lbl_AssessmentComponent = new System.Windows.Forms.Label();
             this.lbl_Rubric = new System.Windows.Forms.Label();
             this.lbl_RubricLevel = new System.Windows.Forms.Label();
             this.cmb_Student = new System.Windows.Forms.ComboBox();
-            this.cmb_Assessment = new System.Windows.Forms.ComboBox();
-            this.cmb_AssessmentComponent = new System.Windows.Forms.ComboBox();
-            this.cmb_Rubrics = new System.Windows.Forms.ComboBox();
-            this.cmb_RubricLevel = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.projectBDataSet13 = new Student_Management_System.ProjectBDataSet13();
             this.studentResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectBDataSet13 = new Student_Management_System.ProjectBDataSet13();
             this.studentResultTableAdapter = new Student_Management_System.ProjectBDataSet13TableAdapters.StudentResultTableAdapter();
+            this.btn_AddRubric = new System.Windows.Forms.Button();
             this.studentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.assessmentComponentIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rubricMeasurementIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.evaluationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rubric = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Component = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ComponentMarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RubricLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ObtainedMarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -73,8 +79,8 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentResultBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet13)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -108,9 +114,9 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
+            this.tableLayoutPanel1.Controls.Add(this.btn_AddRubric, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn_AddStudents, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_AddClo, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btn_AddRubrics, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn_Assessment, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btn_AssessmentComponent, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.btn_ClassAttendance, 0, 6);
@@ -163,20 +169,6 @@
             this.btn_AddClo.Text = "Add CLOs";
             this.btn_AddClo.UseVisualStyleBackColor = true;
             this.btn_AddClo.Click += new System.EventHandler(this.btn_AddClo_Click);
-            // 
-            // btn_AddRubrics
-            // 
-            this.btn_AddRubrics.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_AddRubrics.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btn_AddRubrics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddRubrics.Font = new System.Drawing.Font("Myriad Hebrew", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddRubrics.Location = new System.Drawing.Point(3, 157);
-            this.btn_AddRubrics.Name = "btn_AddRubrics";
-            this.btn_AddRubrics.Size = new System.Drawing.Size(231, 31);
-            this.btn_AddRubrics.TabIndex = 2;
-            this.btn_AddRubrics.Text = "Add Rubrics";
-            this.btn_AddRubrics.UseVisualStyleBackColor = true;
-            this.btn_AddRubrics.Click += new System.EventHandler(this.btn_AddRubrics_Click);
             // 
             // btn_Assessment
             // 
@@ -257,7 +249,7 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(231, 41);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(231, 43);
             this.tableLayoutPanel6.TabIndex = 10;
             // 
             // btn_Result
@@ -280,7 +272,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 873F));
             this.tableLayoutPanel3.Controls.Add(this.cmb_RubricLevel, 1, 4);
             this.tableLayoutPanel3.Controls.Add(this.cmb_Rubrics, 1, 3);
             this.tableLayoutPanel3.Controls.Add(this.cmb_AssessmentComponent, 1, 2);
@@ -301,6 +293,50 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(969, 145);
             this.tableLayoutPanel3.TabIndex = 30;
+            // 
+            // cmb_RubricLevel
+            // 
+            this.cmb_RubricLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_RubricLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_RubricLevel.FormattingEnabled = true;
+            this.cmb_RubricLevel.Location = new System.Drawing.Point(99, 121);
+            this.cmb_RubricLevel.Name = "cmb_RubricLevel";
+            this.cmb_RubricLevel.Size = new System.Drawing.Size(867, 21);
+            this.cmb_RubricLevel.TabIndex = 9;
+            this.cmb_RubricLevel.SelectedIndexChanged += new System.EventHandler(this.cmb_RubricLevel_SelectedIndexChanged);
+            // 
+            // cmb_Rubrics
+            // 
+            this.cmb_Rubrics.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Rubrics.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Rubrics.FormattingEnabled = true;
+            this.cmb_Rubrics.Location = new System.Drawing.Point(99, 92);
+            this.cmb_Rubrics.Name = "cmb_Rubrics";
+            this.cmb_Rubrics.Size = new System.Drawing.Size(867, 21);
+            this.cmb_Rubrics.TabIndex = 8;
+            this.cmb_Rubrics.SelectedIndexChanged += new System.EventHandler(this.cmb_Rubrics_SelectedIndexChanged);
+            // 
+            // cmb_AssessmentComponent
+            // 
+            this.cmb_AssessmentComponent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_AssessmentComponent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_AssessmentComponent.FormattingEnabled = true;
+            this.cmb_AssessmentComponent.Location = new System.Drawing.Point(99, 62);
+            this.cmb_AssessmentComponent.Name = "cmb_AssessmentComponent";
+            this.cmb_AssessmentComponent.Size = new System.Drawing.Size(867, 21);
+            this.cmb_AssessmentComponent.TabIndex = 7;
+            this.cmb_AssessmentComponent.SelectedIndexChanged += new System.EventHandler(this.cmb_AssessmentComponent_SelectedIndexChanged);
+            // 
+            // cmb_Assessment
+            // 
+            this.cmb_Assessment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Assessment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Assessment.FormattingEnabled = true;
+            this.cmb_Assessment.Location = new System.Drawing.Point(99, 32);
+            this.cmb_Assessment.Name = "cmb_Assessment";
+            this.cmb_Assessment.Size = new System.Drawing.Size(867, 21);
+            this.cmb_Assessment.TabIndex = 6;
+            this.cmb_Assessment.SelectedIndexChanged += new System.EventHandler(this.cmb_Assessment_SelectedIndexChanged);
             // 
             // lbl_Student
             // 
@@ -362,65 +398,53 @@
             this.cmb_Student.Size = new System.Drawing.Size(867, 21);
             this.cmb_Student.TabIndex = 5;
             // 
-            // cmb_Assessment
-            // 
-            this.cmb_Assessment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_Assessment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Assessment.FormattingEnabled = true;
-            this.cmb_Assessment.Location = new System.Drawing.Point(99, 32);
-            this.cmb_Assessment.Name = "cmb_Assessment";
-            this.cmb_Assessment.Size = new System.Drawing.Size(867, 21);
-            this.cmb_Assessment.TabIndex = 6;
-            this.cmb_Assessment.SelectedIndexChanged += new System.EventHandler(this.cmb_Assessment_SelectedIndexChanged);
-            // 
-            // cmb_AssessmentComponent
-            // 
-            this.cmb_AssessmentComponent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_AssessmentComponent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_AssessmentComponent.FormattingEnabled = true;
-            this.cmb_AssessmentComponent.Location = new System.Drawing.Point(99, 62);
-            this.cmb_AssessmentComponent.Name = "cmb_AssessmentComponent";
-            this.cmb_AssessmentComponent.Size = new System.Drawing.Size(867, 21);
-            this.cmb_AssessmentComponent.TabIndex = 7;
-            this.cmb_AssessmentComponent.SelectedIndexChanged += new System.EventHandler(this.cmb_AssessmentComponent_SelectedIndexChanged);
-            // 
-            // cmb_Rubrics
-            // 
-            this.cmb_Rubrics.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_Rubrics.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Rubrics.FormattingEnabled = true;
-            this.cmb_Rubrics.Location = new System.Drawing.Point(99, 92);
-            this.cmb_Rubrics.Name = "cmb_Rubrics";
-            this.cmb_Rubrics.Size = new System.Drawing.Size(867, 21);
-            this.cmb_Rubrics.TabIndex = 8;
-            this.cmb_Rubrics.SelectedIndexChanged += new System.EventHandler(this.cmb_Rubrics_SelectedIndexChanged);
-            // 
-            // cmb_RubricLevel
-            // 
-            this.cmb_RubricLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmb_RubricLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_RubricLevel.FormattingEnabled = true;
-            this.cmb_RubricLevel.Location = new System.Drawing.Point(99, 121);
-            this.cmb_RubricLevel.Name = "cmb_RubricLevel";
-            this.cmb_RubricLevel.Size = new System.Drawing.Size(867, 21);
-            this.cmb_RubricLevel.TabIndex = 9;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 301F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 358F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 310F));
             this.tableLayoutPanel4.Controls.Add(this.btn_Cancel, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.btn_Update, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btn_Add, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(243, 254);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(969, 29);
             this.tableLayoutPanel4.TabIndex = 31;
+            // 
+            // btn_Cancel
+            // 
+            this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Cancel.Location = new System.Drawing.Point(662, 3);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(304, 23);
+            this.btn_Cancel.TabIndex = 2;
+            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Update.Location = new System.Drawing.Point(304, 3);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(352, 23);
+            this.btn_Update.TabIndex = 1;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = true;
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Add.Location = new System.Drawing.Point(3, 3);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(295, 23);
+            this.btn_Add.TabIndex = 0;
+            this.btn_Add.Text = "Add";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // tableLayoutPanel5
             // 
@@ -437,37 +461,6 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(969, 281);
             this.tableLayoutPanel5.TabIndex = 32;
             // 
-            // btn_Add
-            // 
-            this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Add.Location = new System.Drawing.Point(3, 3);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(295, 23);
-            this.btn_Add.TabIndex = 0;
-            this.btn_Add.Text = "Add";
-            this.btn_Add.UseVisualStyleBackColor = true;
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
-            // 
-            // btn_Update
-            // 
-            this.btn_Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Update.Location = new System.Drawing.Point(304, 3);
-            this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(352, 23);
-            this.btn_Update.TabIndex = 1;
-            this.btn_Update.Text = "Update";
-            this.btn_Update.UseVisualStyleBackColor = true;
-            // 
-            // btn_Cancel
-            // 
-            this.btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Cancel.Location = new System.Drawing.Point(662, 3);
-            this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(304, 23);
-            this.btn_Cancel.TabIndex = 2;
-            this.btn_Cancel.Text = "Cancel";
-            this.btn_Cancel.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -480,26 +473,46 @@
             this.studentIdDataGridViewTextBoxColumn,
             this.assessmentComponentIdDataGridViewTextBoxColumn,
             this.rubricMeasurementIdDataGridViewTextBoxColumn,
-            this.evaluationDateDataGridViewTextBoxColumn});
+            this.evaluationDateDataGridViewTextBoxColumn,
+            this.Student,
+            this.Rubric,
+            this.Component,
+            this.ComponentMarks,
+            this.RubricLevel,
+            this.ObtainedMarks});
             this.dataGridView1.DataSource = this.studentResultBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(963, 275);
             this.dataGridView1.TabIndex = 0;
             // 
-            // projectBDataSet13
-            // 
-            this.projectBDataSet13.DataSetName = "ProjectBDataSet13";
-            this.projectBDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // studentResultBindingSource
             // 
             this.studentResultBindingSource.DataMember = "StudentResult";
             this.studentResultBindingSource.DataSource = this.projectBDataSet13;
             // 
+            // projectBDataSet13
+            // 
+            this.projectBDataSet13.DataSetName = "ProjectBDataSet13";
+            this.projectBDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // studentResultTableAdapter
             // 
             this.studentResultTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_AddRubric
+            // 
+            this.btn_AddRubric.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AddRubric.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_AddRubric.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddRubric.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddRubric.Location = new System.Drawing.Point(3, 157);
+            this.btn_AddRubric.Name = "btn_AddRubric";
+            this.btn_AddRubric.Size = new System.Drawing.Size(225, 31);
+            this.btn_AddRubric.TabIndex = 11;
+            this.btn_AddRubric.Text = "Add Rubric";
+            this.btn_AddRubric.UseVisualStyleBackColor = true;
+            this.btn_AddRubric.Click += new System.EventHandler(this.btn_AddRubric_Click);
             // 
             // studentIdDataGridViewTextBoxColumn
             // 
@@ -525,6 +538,36 @@
             this.evaluationDateDataGridViewTextBoxColumn.HeaderText = "EvaluationDate";
             this.evaluationDateDataGridViewTextBoxColumn.Name = "evaluationDateDataGridViewTextBoxColumn";
             // 
+            // Student
+            // 
+            this.Student.HeaderText = "Student";
+            this.Student.Name = "Student";
+            // 
+            // Rubric
+            // 
+            this.Rubric.HeaderText = "Rubric";
+            this.Rubric.Name = "Rubric";
+            // 
+            // Component
+            // 
+            this.Component.HeaderText = "Component";
+            this.Component.Name = "Component";
+            // 
+            // ComponentMarks
+            // 
+            this.ComponentMarks.HeaderText = "ComponentMarks";
+            this.ComponentMarks.Name = "ComponentMarks";
+            // 
+            // RubricLevel
+            // 
+            this.RubricLevel.HeaderText = "RubricLevel";
+            this.RubricLevel.Name = "RubricLevel";
+            // 
+            // ObtainedMarks
+            // 
+            this.ObtainedMarks.HeaderText = "ObtainedMarks";
+            this.ObtainedMarks.Name = "ObtainedMarks";
+            // 
             // Result
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,8 +590,8 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentResultBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -560,7 +603,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btn_AddStudents;
         private System.Windows.Forms.Button btn_AddClo;
-        private System.Windows.Forms.Button btn_AddRubrics;
         private System.Windows.Forms.Button btn_Assessment;
         private System.Windows.Forms.Button btn_AssessmentComponent;
         private System.Windows.Forms.Button btn_ClassAttendance;
@@ -588,9 +630,16 @@
         private ProjectBDataSet13 projectBDataSet13;
         private System.Windows.Forms.BindingSource studentResultBindingSource;
         private ProjectBDataSet13TableAdapters.StudentResultTableAdapter studentResultTableAdapter;
+        private System.Windows.Forms.Button btn_AddRubric;
         private System.Windows.Forms.DataGridViewTextBoxColumn studentIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn assessmentComponentIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rubricMeasurementIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn evaluationDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Student;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rubric;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Component;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ComponentMarks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RubricLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ObtainedMarks;
     }
 }

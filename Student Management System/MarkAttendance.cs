@@ -286,6 +286,18 @@ namespace Student_Management_System
         }
 
 
+        public void DeleteClassAtt(int id)
+        {
+            string cmd1 = "DELETE FROM StudentAttendance WHERE AttendanceId = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd1);
+
+            string cmd = "DELETE FROM ClassAttendance WHERE Id = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd);
+
+            MessageBox.Show("Data Deleted");
+        }
+
+
 
 
         /// <summary>

@@ -142,6 +142,19 @@ namespace Student_Management_System
             return id;
         }
 
+        public int getComponentMarksFromName(string name)
+        {
+            int s = -1;
+            string cmd = "SELECT * FROM AssessmentComponent WHERE Name = '" + name + "'";
+            SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            while (d.Read())
+            {
+                s = d.GetInt32(3);
+                break;
+            }
+            return s;
+        }
+
 
         public void Add()
         {
@@ -158,6 +171,89 @@ namespace Student_Management_System
             sqlDA.Fill(dt);
             return dt;
         }
+
+
+        /// <summary>
+        /// Gets registration number from Student table
+        /// </summary>
+        /// <param name="id">id selected by user</param>
+        /// <returns>returns registration number of student corresponding ot id</returns>
+        public string getRegNoFromStudentId(int id)
+        {
+            string reg = "";
+            string cmd = "SELECT * FROM Student WHERE Id = '" + id + "'";
+            SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            while (d.Read())
+            {
+                reg = d.GetString(5);
+                break;
+            }
+            return reg;
+        }
+
+
+        public int getRubricIdFromAssessmentCompId(int id1)
+        {
+            string cmd = "SELECT RubricId FROM AssessmentComponent WHERE Id = '" + id1 + "'";
+            int id = DatabaseConnection.getInstance().getScalarData(cmd);
+            return id;
+        }
+
+        public string getRubDetailsFromRubId(int id1)
+        {
+            string s = "";
+            string cmd = "SELECT * FROM Rubric WHERE Id = '" + id1 + "'";
+            SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            while (d.Read())
+            {
+                s = d.GetString(1);
+                break;
+            }
+            return s;
+        }
+
+        public string getAssessmentCompNameFromAssessmentCompId(int id1)
+        {
+            string s = "";
+            string cmd = "SELECT * FROM AssessmentComponent WHERE Id = '" + id1 + "'";
+            SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            while (d.Read())
+            {
+                s = d.GetString(1);
+                break;
+            }
+            return s;
+        }
+
+
+        public int getTotalMarksFromAssessmentCompId(int id1)
+        {
+            int s = -1;
+            string cmd = "SELECT * FROM AssessmentComponent WHERE Id = '" + id1 + "'";
+            SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            while (d.Read())
+            {
+                s = d.GetInt32(3);
+                break;
+            }
+            return s;
+        }
+
+
+        public int getMeasurementLevelFromRubricLevelId(int id1)
+        {
+            int s = -1;
+            string cmd = "SELECT * FROM RubricLevel WHERE Id = '" + id1 + "'";
+            SqlDataReader d = DatabaseConnection.getInstance().getData(cmd);
+            while (d.Read())
+            {
+                s = d.GetInt32(3);
+                break;
+            }
+            return s;
+        }
+
+
 
 
     }

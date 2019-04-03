@@ -156,6 +156,27 @@ namespace Student_Management_System
                 btn_Update.Enabled = true;
                 btn_Add.Enabled = false;
             }
+            else if (value == "Delete")
+            {
+                string id1 = dataGridView1.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+                id = Convert.ToInt32(id1);
+
+                AssessmentComponents ass = new AssessmentComponents();
+                ass.Delete(id);
+
+                DataTable dt = ass.ShowInGrid();
+                int count = dt.Rows.Count;
+                dataGridView1.DataSource = dt;
+                for (int i = 0; i < count; i++)
+                {
+                    string s = ass.getAssessmentTitleFromId(Convert.ToInt32(dt.Rows[i][6]));
+                    string s1 = ass.getRubricDetailFromId(Convert.ToInt32(dt.Rows[i][2]));
+
+                    dataGridView1.Rows[i].Cells[3].Value = s1;
+                    dataGridView1.Rows[i].Cells[2].Value = s;
+                }
+
+            }
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
@@ -237,8 +258,13 @@ namespace Student_Management_System
             this.Close();
         }
 
-
-
-
+        private void btn_Result_Click(object sender, EventArgs e)
+        {
+            Result R = new Result();
+            R.Show();
+            R.Refresh();
+            R.Location = this.Location;
+            this.Close();
+        }
     }
 }

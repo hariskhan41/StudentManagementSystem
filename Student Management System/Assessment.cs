@@ -53,7 +53,7 @@ namespace Student_Management_System
             AddStudents.getInstance().Show();
             AddStudents.getInstance().Refresh();
             AddStudents.getInstance().Location = this.Location;
-            this.Hide();
+            this.Close();
         }
 
 
@@ -62,7 +62,7 @@ namespace Student_Management_System
             Clo.getInstance().Show();
             Clo.getInstance().Refresh();
             Clo.getInstance().Location = this.Location;
-            this.Hide();
+            this.Close();
         }
 
 
@@ -76,7 +76,7 @@ namespace Student_Management_System
 
             Rubric.getInstance().Refresh();
             Rubric.getInstance().Location = this.Location;
-            this.Hide();
+            this.Close();
         }
 
 
@@ -200,7 +200,7 @@ namespace Student_Management_System
             ass.Show();
             ass.Refresh();
             ass.Location = this.Location;
-            this.Hide();
+            this.Close();
         }
 
         private void btn_Attendance_Click(object sender, EventArgs e)
@@ -209,7 +209,7 @@ namespace Student_Management_System
             at.Show();
             at.Refresh();
             at.Location = this.Location;
-            this.Hide();
+            this.Close();
         }
 
         private void btn_Result_Click(object sender, EventArgs e)
@@ -227,6 +227,20 @@ namespace Student_Management_System
             RL.Refresh();
             RL.Location = this.Location;
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Result R = new Result();
+            R.Show();
+            R.Refresh();
+            R.Location = this.Location;
+            this.Close();
+        }
+
+        private void btn_Assessment_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

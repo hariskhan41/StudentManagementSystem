@@ -142,6 +142,18 @@ namespace Student_Management_System
         /// <param name="id">Id agains which record is to be deleted</param>
         public void Delete(int id)
         {
+            int rubLvlId = getRubricLevelIdFromRubricId(id);
+            int assCompId = getAssessmentComponentIdFromRubricId(id);
+
+            string cmd1 = "DELETE FROM StudentResult WHERE RubricMeasurementId = '" + rubLvlId + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd1);
+
+            string cmd2 = "DELETE FROM StudentResult WHERE AssessmentComponentId = '" + assCompId + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd2);
+
+            string cmd3 = "DELETE FROM RubricLevel WHERE RubricId = '" + id + "'";
+
+
             string cmd = "DELETE FROM Rubric WHERE Id = '" + id + "'";
             DatabaseConnection.getInstance().exectuteQuery(cmd);
             MessageBox.Show("Data Deleted!");
@@ -158,6 +170,21 @@ namespace Student_Management_System
             DataTable dt = new DataTable();
             sqlDA.Fill(dt);
             return dt;
+        }
+
+
+        public int getRubricLevelIdFromRubricId(int rubId)
+        {
+            string cmd = "SELECT Id FROM RubricLevel WHERE RubricId = '" + rubId + "'";
+            int i = DatabaseConnection.getInstance().getScalarData(cmd);
+            return i;
+        }
+
+        public int getAssessmentComponentIdFromRubricId(int rubId)
+        {
+            string cmd = "SELECT Id FROM AssessmentComponent WHERE RubricId = '" + rubId + "'";
+            int i = DatabaseConnection.getInstance().getScalarData(cmd);
+            return i;
         }
 
 

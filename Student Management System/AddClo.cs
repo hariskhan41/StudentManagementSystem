@@ -109,11 +109,55 @@ namespace Student_Management_System
         /// <param name="id">Id of particular row user clicked to delete</param>
         public void Delete(int id)
         {
-            string cmd = "DELETE FROM Rubric WHERE CloId = '" + id + "'";
-            string cmd2 = "DELETE FROM Clo WHERE Id = '" + id + "'";
-            DatabaseConnection.getInstance().exectuteQuery(cmd);
+            int rubId = getRubricIdFromCloId(id);
+            int rubLvlId = getRubricLvlIdFromRubricId(rubId);
+            int assCompId = getAssessmentComponentIdFromRubricId(rubId);
+
+            string cmd1 = "DELETE FROM StudentResult WHERE RubricMeasurementId = '" + rubLvlId + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd1);
+
+            string cmd2 = "DELETE FROM StudentResult WHERE AssessmentComponentId = '" + assCompId + "'";
             DatabaseConnection.getInstance().exectuteQuery(cmd2);
+
+            string cmd3 = "DELETE FROM RubricLevel WHERE RubricId = '" + rubId + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd3);
+
+            string cmd4 = "DELETE FROM AssessmentComponent WHERE RubricId = '" + rubId + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd4);
+
+
+            string cmd5 = "DELETE FROM Rubric WHERE CloId = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd5);
+
+            string cmd = "DELETE FROM Clo WHERE Id = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd);
+
             MessageBox.Show("CLO is deleted along with all of rubrics against this CLO");
         }
+
+        public int getRubricIdFromCloId(int cloId)
+        {
+            string cmd = "SELECT Id FROM Rubric WHERE CloId = '" + cloId + "'";
+            int i = DatabaseConnection.getInstance().getScalarData(cmd);
+            return i;
+        }
+
+        public int getRubricLvlIdFromRubricId(int rubId)
+        {
+            string cmd = "SELECT Id FROM RubricLevel WHERE RubricId = '" + rubId + "'";
+            int i = DatabaseConnection.getInstance().getScalarData(cmd);
+            return i;
+        }
+
+
+        public int getAssessmentComponentIdFromRubricId(int rubId)
+        {
+            string cmd = "SELECT Id FROM AssessmentComponent WHERE RubricId = '" + rubId + "'";
+            int i = DatabaseConnection.getInstance().getScalarData(cmd);
+            return i;
+        }
+
+
+
     }
 }

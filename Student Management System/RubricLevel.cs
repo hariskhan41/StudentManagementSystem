@@ -187,5 +187,14 @@ namespace Student_Management_System
                 }
             }
         }
+
+        private void btn_Result_Click(object sender, EventArgs e)
+        {
+            Result R = new Result();
+            R.Show();
+            R.Refresh();
+            R.Location = this.Location;
+            this.Close();
+        }
     }
 }

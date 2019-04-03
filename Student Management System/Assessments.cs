@@ -132,6 +132,14 @@ namespace Student_Management_System
         }
 
 
+        public int getAssessmentComponentIdFromAssessmentId(int id)
+        {
+            string cmd = "SELECT Id FROM AssessmentComponent WHERE AssessmentId = '" + id + "'";
+            int i = DatabaseConnection.getInstance().getScalarData(cmd);
+            return i;
+        }
+
+
 
         public DataTable ShowInGrid()
         {
@@ -169,6 +177,14 @@ namespace Student_Management_System
 
         public void Delete(int id)
         {
+            int assCompId = getAssessmentComponentIdFromAssessmentId(id);
+
+            string cmd1 = "DELETE FROM StudentResult WHERE AssessmentComponentId = '" + assCompId + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd1);
+
+            string cmd2 = "DELETE FROM AssessmentComponent WHERE AssessmentId = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd2);
+
             string cmd = "DELETE FROM Assessment WHERE Id = '" + id + "'";
             DatabaseConnection.getInstance().exectuteQuery(cmd);
             MessageBox.Show("Data Deleted!");

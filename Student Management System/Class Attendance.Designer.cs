@@ -40,6 +40,8 @@
             this.btn_ClassAttendace = new System.Windows.Forms.Button();
             this.btn_StudentAttendance = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Result = new System.Windows.Forms.Button();
             this.lbl_Date = new System.Windows.Forms.Label();
             this.dateCalender = new System.Windows.Forms.MonthCalendar();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,17 +58,15 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Result = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.classAttendanceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet10)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -241,6 +241,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.btn_Result, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 395);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(231, 41);
+            this.tableLayoutPanel6.TabIndex = 9;
+            // 
+            // btn_Result
+            // 
+            this.btn_Result.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Result.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_Result.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Result.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Result.Location = new System.Drawing.Point(3, 3);
+            this.btn_Result.Name = "btn_Result";
+            this.btn_Result.Size = new System.Drawing.Size(225, 35);
+            this.btn_Result.TabIndex = 11;
+            this.btn_Result.Text = "Result";
+            this.btn_Result.UseVisualStyleBackColor = true;
+            this.btn_Result.Click += new System.EventHandler(this.btn_Result_Click);
+            // 
             // lbl_Date
             // 
             this.lbl_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -398,31 +424,6 @@
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.btn_Result, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 395);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(231, 41);
-            this.tableLayoutPanel6.TabIndex = 9;
-            // 
-            // btn_Result
-            // 
-            this.btn_Result.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Result.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btn_Result.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Result.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Result.Location = new System.Drawing.Point(3, 3);
-            this.btn_Result.Name = "btn_Result";
-            this.btn_Result.Size = new System.Drawing.Size(225, 35);
-            this.btn_Result.TabIndex = 11;
-            this.btn_Result.Text = "Result";
-            this.btn_Result.UseVisualStyleBackColor = true;
-            // 
             // Class_Attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,6 +440,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -446,7 +448,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.classAttendanceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet10)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

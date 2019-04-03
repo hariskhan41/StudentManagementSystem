@@ -40,6 +40,8 @@
             this.btn_ClassAttendance = new System.Windows.Forms.Button();
             this.btn_StudentAttendance = new System.Windows.Forms.Button();
             this.btn_RubricLevel = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Result = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txt_MeasurementLevel = new System.Windows.Forms.TextBox();
             this.lbl_Rubric = new System.Windows.Forms.Label();
@@ -54,27 +56,24 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rubricLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.projectBDataSet12 = new Student_Management_System.ProjectBDataSet12();
+            this.rubricLevelTableAdapter = new Student_Management_System.ProjectBDataSet12TableAdapters.RubricLevelTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rubricIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RubricDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.measurementLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.rubricLevelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.projectBDataSet12 = new Student_Management_System.ProjectBDataSet12();
-            this.rubricLevelTableAdapter = new Student_Management_System.ProjectBDataSet12TableAdapters.RubricLevelTableAdapter();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_Result = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubricLevelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet12)).BeginInit();
-            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -247,6 +246,32 @@
             this.btn_RubricLevel.Text = "Rubric Level";
             this.btn_RubricLevel.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.btn_Result, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 420);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(231, 42);
+            this.tableLayoutPanel6.TabIndex = 10;
+            // 
+            // btn_Result
+            // 
+            this.btn_Result.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Result.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
+            this.btn_Result.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Result.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Result.Location = new System.Drawing.Point(3, 3);
+            this.btn_Result.Name = "btn_Result";
+            this.btn_Result.Size = new System.Drawing.Size(225, 35);
+            this.btn_Result.TabIndex = 11;
+            this.btn_Result.Text = "Result";
+            this.btn_Result.UseVisualStyleBackColor = true;
+            this.btn_Result.Click += new System.EventHandler(this.btn_Result_Click);
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -412,14 +437,27 @@
             this.RubricDetails,
             this.detailsDataGridViewTextBoxColumn,
             this.measurementLevelDataGridViewTextBoxColumn,
-            this.Edit,
-            this.Delete});
+            this.Edit});
             this.dataGridView1.DataSource = this.rubricLevelBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(923, 286);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // rubricLevelBindingSource
+            // 
+            this.rubricLevelBindingSource.DataMember = "RubricLevel";
+            this.rubricLevelBindingSource.DataSource = this.projectBDataSet12;
+            // 
+            // projectBDataSet12
+            // 
+            this.projectBDataSet12.DataSetName = "ProjectBDataSet12";
+            this.projectBDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rubricLevelTableAdapter
+            // 
+            this.rubricLevelTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -461,54 +499,6 @@
             this.Edit.Text = "Edit";
             this.Edit.UseColumnTextForButtonValue = true;
             // 
-            // Delete
-            // 
-            this.Delete.DataPropertyName = "Id";
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            // 
-            // rubricLevelBindingSource
-            // 
-            this.rubricLevelBindingSource.DataMember = "RubricLevel";
-            this.rubricLevelBindingSource.DataSource = this.projectBDataSet12;
-            // 
-            // projectBDataSet12
-            // 
-            this.projectBDataSet12.DataSetName = "ProjectBDataSet12";
-            this.projectBDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rubricLevelTableAdapter
-            // 
-            this.rubricLevelTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.btn_Result, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 420);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(231, 42);
-            this.tableLayoutPanel6.TabIndex = 10;
-            // 
-            // btn_Result
-            // 
-            this.btn_Result.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Result.FlatAppearance.BorderColor = System.Drawing.SystemColors.WindowFrame;
-            this.btn_Result.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Result.Font = new System.Drawing.Font("Myriad Hebrew", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Result.Location = new System.Drawing.Point(3, 3);
-            this.btn_Result.Name = "btn_Result";
-            this.btn_Result.Size = new System.Drawing.Size(225, 35);
-            this.btn_Result.TabIndex = 11;
-            this.btn_Result.Text = "Result";
-            this.btn_Result.UseVisualStyleBackColor = true;
-            // 
             // RubricLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,6 +515,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -532,7 +523,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubricLevelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projectBDataSet12)).EndInit();
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -567,14 +557,13 @@
         private ProjectBDataSet12 projectBDataSet12;
         private System.Windows.Forms.BindingSource rubricLevelBindingSource;
         private ProjectBDataSet12TableAdapters.RubricLevelTableAdapter rubricLevelTableAdapter;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Button btn_Result;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rubricIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn RubricDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn detailsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn measurementLevelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button btn_Result;
     }
 }

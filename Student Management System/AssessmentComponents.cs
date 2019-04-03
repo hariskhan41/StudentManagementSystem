@@ -213,6 +213,18 @@ namespace Student_Management_System
         }
 
 
+        public void Delete(int id)
+        {
+            string cmd1 = "DELETE FROM StudentResult WHERE AssessmentComponentId = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd1);
+
+            string cmd = "DELETE FROM AssessmentComponent WHERE Id = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd);
+
+            MessageBox.Show("Data Deleted");
+        }
+
+
 
         /// <summary>
         /// Show all data from AssessmentComponent table in grid.

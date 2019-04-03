@@ -402,11 +402,18 @@ namespace Student_Management_System
         /// <returns>Returns DataTable Containing data fetched from table after deletion.</returns>
         public DataTable Delete(int id)
         {
+            string cmd1 = "DELETE FROM StudentAttendance WHERE StudentId = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd1);
+
+            string cmd2 = "DELETE FROM StudentResult WHERE StudentId = '" + id + "'";
+            DatabaseConnection.getInstance().exectuteQuery(cmd2);
+
             string cmd = "DELETE FROM Student WHERE Id = '" + id + "'";
             DatabaseConnection.getInstance().exectuteQuery(cmd);
             MessageBox.Show("Data Deleted!");
-            string cmd2 = "SELECT * FROM Student";
-            SqlDataAdapter sqlDA = DatabaseConnection.getInstance().Query(cmd2);
+
+            string cmd3 = "SELECT * FROM Student";
+            SqlDataAdapter sqlDA = DatabaseConnection.getInstance().Query(cmd3);
             DataTable dt = new DataTable();
             sqlDA.Fill(dt);
             return dt;

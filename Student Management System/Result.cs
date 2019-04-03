@@ -27,6 +27,34 @@ namespace Student_Management_System
             Results R = new Results();
             R.AddStudentsToComboBox(cmb_Student);
             R.AddAssessmentToComboBox(cmb_Assessment);
+
+            DataTable dt = R.ShowInGrid();
+            dataGridView1.DataSource = dt;
+
+            int count = dt.Rows.Count;
+            for (int i = 0; i < count; i++)
+            {
+                dataGridView1.Rows[i].Cells[4].Value = R.getRegNoFromStudentId(Convert.ToInt32(dt.Rows[i][0]));
+
+                int k1 = R.getRubricIdFromAssessmentCompId(Convert.ToInt32(dt.Rows[i][1]));
+                dataGridView1.Rows[i].Cells[5].Value = R.getRubDetailsFromRubId(k1);
+
+                dataGridView1.Rows[i].Cells[6].Value = R.getAssessmentCompNameFromAssessmentCompId(Convert.ToInt32(dt.Rows[i][1]));
+
+                dataGridView1.Rows[i].Cells[7].Value = R.getTotalMarksFromAssessmentCompId(Convert.ToInt32(dt.Rows[i][1]));
+
+                dataGridView1.Rows[i].Cells[8].Value = R.getMeasurementLevelFromRubricLevelId(Convert.ToInt32(dt.Rows[i][2]));
+
+                decimal ObtainedMarks = (Convert.ToDecimal(dataGridView1.Rows[i].Cells[8].Value) * Convert.ToDecimal(dataGridView1.Rows[i].Cells[7].Value)) / 4;
+                dataGridView1.Rows[i].Cells[9].Value = ObtainedMarks;
+
+                
+                
+                
+
+            }
+
+
         }
 
         private void btn_AddStudents_Click(object sender, EventArgs e)
@@ -47,22 +75,15 @@ namespace Student_Management_System
 
         private void btn_AddRubrics_Click(object sender, EventArgs e)
         {
-            Rubric.getInstance().Show();
-
-            Rubrics r = new Rubrics();
-            Rubric.getInstance().cmb_CLO.Items.Clear();
-            r.AddToComboBox(Rubric.getInstance().cmb_CLO);
-
-            Rubric.getInstance().Refresh();
-            Rubric.getInstance().Location = this.Location;
-            this.Close();
+            
         }
 
         private void btn_Assessment_Click(object sender, EventArgs e)
         {
-            Assessment.getInstance().Show();
-            Assessment.getInstance().Refresh();
-            Assessment.getInstance().Location = this.Location;
+            Assessment ass = new Assessment();
+            ass.Show();
+            ass.Refresh();
+            ass.Location = this.Location;
             this.Close();
         }
 
@@ -136,6 +157,44 @@ namespace Student_Management_System
 
             DataTable dt = R.ShowInGrid();
             dataGridView1.DataSource = dt;
+
+            int count = dt.Rows.Count;
+            for (int i = 0; i < count; i++)
+            {
+                dataGridView1.Rows[i].Cells[4].Value = R.getRegNoFromStudentId(Convert.ToInt32(dt.Rows[i][0]));
+
+                int k1 = R.getRubricIdFromAssessmentCompId(Convert.ToInt32(dt.Rows[i][1]));
+                dataGridView1.Rows[i].Cells[5].Value = R.getRubDetailsFromRubId(k1);
+
+                dataGridView1.Rows[i].Cells[6].Value = R.getAssessmentCompNameFromAssessmentCompId(Convert.ToInt32(dt.Rows[i][1]));
+
+                dataGridView1.Rows[i].Cells[7].Value = R.getTotalMarksFromAssessmentCompId(Convert.ToInt32(dt.Rows[i][1]));
+
+                dataGridView1.Rows[i].Cells[8].Value = R.getMeasurementLevelFromRubricLevelId(Convert.ToInt32(dt.Rows[i][2]));
+
+                float ObtainedMarks = (Convert.ToInt32(dataGridView1.Rows[i].Cells[8].Value) * Convert.ToInt32(dataGridView1.Rows[i].Cells[7].Value)) / 4;
+                dataGridView1.Rows[i].Cells[9].Value = ObtainedMarks;
+            }
+
+
+        }
+
+        private void btn_AddRubric_Click(object sender, EventArgs e)
+        {
+            //Rubric.getInstance().Show();
+
+            //Rubrics r = new Rubrics();
+            //Rubric.getInstance().cmb_CLO.Items.Clear();
+            //r.AddToComboBox(Rubric.getInstance().cmb_CLO);
+
+            //Rubric.getInstance().Refresh();
+            //Rubric.getInstance().Location = this.Location;
+            //this.Hide();
+        }
+
+        private void cmb_RubricLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
