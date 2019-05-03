@@ -1,0 +1,34 @@
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\bin\Debug\Student Management System.exe.config
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\bin\Debug\Student Management System.exe
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\bin\Debug\Student Management System.pdb
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.AddStudents.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Properties.Resources.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student Management System.csproj.GenerateResource.Cache
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student Management System.exe
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student Management System.pdb
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.CLO.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student Management System.csprojResolveAssemblyReference.cache
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Rubric.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Assessment.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.RubricLevel.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.AssessmentComponent.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Attendance.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Class_Attendance.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\Student Management System\Student Management System\obj\Debug\Student_Management_System.Result.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\bin\Debug\Student Management System.exe.config
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\bin\Debug\Student Management System.exe
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\bin\Debug\Student Management System.pdb
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student Management System.csprojResolveAssemblyReference.cache
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student_Management_System.AddStudents.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student_Management_System.Assessment.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student_Management_System.AssessmentComponent.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student_Management_System.Attendance.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student_Management_System.Class_Attendance.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student_Management_System.Clo.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student_Management_System.Properties.Resources.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student_Management_System.Result.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student_Management_System.Rubric.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student_Management_System.RubricLevel.resources
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student Management System.csproj.GenerateResource.Cache
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student Management System.exe
+F:\UET\Semester 6\Database Management Systems\Lab\Lab7(Project)\StudentManagementSystem-master\StudentManagementSystem-master\Student Management System\obj\Debug\Student Management System.pdb
